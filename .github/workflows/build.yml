@@ -20,7 +20,7 @@ jobs:
       uses: NuGet/setup-nuget@v2
 
     - name: Restore NuGet packages
-      run: nuget restore
+      run: nuget restore "interfaz de caja registradora.slnx"
 
     - name: Build solution
-      run: msbuild /p:Configuration=Release
+      run: msbuild "interfaz de caja registradora.slnx" /p:Configuration=Release
