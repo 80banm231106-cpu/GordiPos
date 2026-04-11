@@ -3,13 +3,13 @@
   "WorkspaceRootPath": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\CorteDeCaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\AperturaCaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\Form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\AperturaCaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+      "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\CorteDeCaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{A2FE74E1-B743-11D0-AE1A-00A0C90FFFC3}|\u003CMiscFiles\u003E|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
@@ -34,7 +34,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 3,
+          "SelectedChildIndex": 5,
           "Children": [
             {
               "$type": "Bookmark",
@@ -50,7 +50,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 2,
               "Title": "CorteDeCaja.cs",
               "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\CorteDeCaja.cs",
               "RelativeDocumentMoniker": "..\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\CorteDeCaja.cs",
@@ -67,13 +67,12 @@
               "RelativeDocumentMoniker": "..\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\Form1.cs",
               "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\Form1.cs",
               "RelativeToolTip": "..\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\Form1.cs",
-              "ViewState": "AgIAAL4AAAAAAAAAAAAjwMoAAAAMAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-10T00:06:28.262Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 0,
               "Title": "AperturaCaja.cs",
               "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\AperturaCaja.cs",
               "RelativeDocumentMoniker": "..\\InterfazCajaRegistradora-Recup05\\interfaz de caja registradora\\AperturaCaja.cs",
