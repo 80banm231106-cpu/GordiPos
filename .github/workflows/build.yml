@@ -1,0 +1,26 @@
+name: Build GordiPos
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v4
+
+    - name: Setup MSBuild
+      uses: microsoft/setup-msbuild@v2
+
+    - name: Setup NuGet
+      uses: NuGet/setup-nuget@v2
+
+    - name: Restaurar paquetes NuGet
+      run: nuget restore "interfaz de caja registradora.slnx"
+
+    - name: Compilar Proyecto
+      run: msbuild "interfaz de caja registradora.slnx" /p:Configuration=Release
