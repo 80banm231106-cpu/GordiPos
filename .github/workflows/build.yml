@@ -20,7 +20,9 @@ jobs:
       uses: NuGet/setup-nuget@v2
 
     - name: Restaurar paquetes NuGet
-      run: nuget restore "interfaz de caja registradora.slnx"
+      # Aquí le decimos que busque cualquier archivo de proyecto
+      run: nuget restore **/*.slnx
 
     - name: Compilar Proyecto
-      run: msbuild "interfaz de caja registradora.slnx" /p:Configuration=Release
+      # Usamos el asterisco para que encuentre el proyecto sin importar la carpeta
+      run: msbuild **/*.slnx /p:Configuration=Release /p:DeployOnBuild=true
