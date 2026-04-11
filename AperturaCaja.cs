@@ -16,5 +16,10 @@ namespace interfaz_de_caja_registradora
         {
             InitializeComponent();
         }
+
+        private void AperturaCaja_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }
