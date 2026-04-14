@@ -295,7 +295,13 @@ namespace interfaz_de_caja_registradora
 
         private void button10_Click(object sender, EventArgs e)
         {
+            double precio = 119;
 
+            ListaVenta.Items.Add("Combo pa compartir - $119");
+
+            total += precio;
+
+            lblTotal.Text = "Total: $" + total;
         }
 
         private void button5_Click(object sender, EventArgs e)
@@ -466,6 +472,39 @@ namespace interfaz_de_caja_registradora
             lblTotal.Text = "Total: $0";
             txtPago.Clear();
             lblCambio.Text = "Cambio: $0";
+        }
+
+        private void button8_Click(object sender, EventArgs e)
+        {
+            double precio = 120;
+
+            ListaVenta.Items.Add("Combo Feliz - $120");
+
+            total += precio;
+
+            lblTotal.Text = "Total: $" + total;
+        }
+
+        private void button9_Click(object sender, EventArgs e)
+        {
+            double precio = 109;
+
+            ListaVenta.Items.Add("Combo Antojo - $109");
+
+            total += precio;
+
+            lblTotal.Text = "Total: $" + total;
+        }
+
+        private void button11_Click(object sender, EventArgs e)
+        {
+            double precio = 90;
+
+            ListaVenta.Items.Add("Combo Dulce 2x - $90");
+
+            total += precio;
+
+            lblTotal.Text = "Total: $" + total;
         }
     }
     
