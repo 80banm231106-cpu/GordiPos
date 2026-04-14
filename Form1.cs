@@ -366,7 +366,7 @@ namespace interfaz_de_caja_registradora
 
         private void lblTotal_Click_1(object sender, EventArgs e)
         {
-
+           
         }
 
         private void cerrarSesionToolStripMenuItem_Click(object sender, EventArgs e)
@@ -394,6 +394,78 @@ namespace interfaz_de_caja_registradora
 
         private void pictureBox14_Click(object sender, EventArgs e)
         {
+        }
+
+        private void lblCambio_Click(object sender, EventArgs e)
+        {
+            double pago;
+
+            if (!double.TryParse(txtPago.Text.Trim(), out pago))
+            {
+                MessageBox.Show("Ingresa una cantidad");
+                return;
+            }
+
+            if (pago < total)
+            {
+                MessageBox.Show("El pago es insuficiente");
+                return;
+            }
+
+            // 1. Calculas el cambio
+            double cambio = pago - total;
+
+            // 2. Actualizas el texto de la etiqueta (formateado a 2 decimales para dinero)
+            lblCambio.Text = "Cambio: $" + cambio.ToString("0.00");
+
+            // 3. ¡LA CLAVE!: Fuerzas a la interfaz a dibujarlo antes de que se pause
+            lblCambio.Refresh();
+
+            // 4. (Opcional pero recomendado) Muestras el cambio también en el mensaje
+            MessageBox.Show($"Pago realizado con éxito.\n\nCambio a devolver: ${cambio.ToString("0.00")}", "Venta Completada");
+
+            // --- Limpieza del formulario ---
+            ListaVenta.Items.Clear();
+            total = 0;
+            lblTotal.Text = "Total: $0";
+            txtPago.Clear();
+            lblCambio.Text = "Cambio: $0";
+        }
+
+        private void lblCambio_Click_1(object sender, EventArgs e)
+        {
+            double pago;
+
+            if (!double.TryParse(txtPago.Text.Trim(), out pago))
+            {
+                MessageBox.Show("Ingresa una cantidad");
+                return;
+            }
+
+            if (pago < total)
+            {
+                MessageBox.Show("El pago es insuficiente");
+                return;
+            }
+
+            // 1. Calculas el cambio
+            double cambio = pago - total;
+
+            // 2. Actualizas el texto de la etiqueta (formateado a 2 decimales para dinero)
+            lblCambio.Text = "Cambio: $" + cambio.ToString("0.00");
+
+            // 3. ¡LA CLAVE!: Fuerzas a la interfaz a dibujarlo antes de que se pause
+            lblCambio.Refresh();
+
+            // 4. (Opcional pero recomendado) Muestras el cambio también en el mensaje
+            MessageBox.Show($"Pago realizado con éxito.\n\nCambio a devolver: ${cambio.ToString("0.00")}", "Venta Completada");
+
+            // --- Limpieza del formulario ---
+            ListaVenta.Items.Clear();
+            total = 0;
+            lblTotal.Text = "Total: $0";
+            txtPago.Clear();
+            lblCambio.Text = "Cambio: $0";
         }
     }
     

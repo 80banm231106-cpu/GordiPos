@@ -38,7 +38,6 @@
             this.btnEliminar = new System.Windows.Forms.Button();
             this.txtPago = new System.Windows.Forms.TextBox();
             this.button1 = new System.Windows.Forms.Button();
-            this.lblCambio = new System.Windows.Forms.Label();
             this.ListaVenta = new System.Windows.Forms.CheckedListBox();
             this.panel3 = new System.Windows.Forms.Panel();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -66,6 +65,11 @@
             this.panelBebidas = new System.Windows.Forms.Panel();
             this.pictureBox16 = new System.Windows.Forms.PictureBox();
             this.pictureBox15 = new System.Windows.Forms.PictureBox();
+            this.pictureBox14 = new System.Windows.Forms.PictureBox();
+            this.pictureBox13 = new System.Windows.Forms.PictureBox();
+            this.button7 = new System.Windows.Forms.Button();
+            this.button6 = new System.Windows.Forms.Button();
+            this.button5 = new System.Windows.Forms.Button();
             this.panelPromociones = new System.Windows.Forms.Panel();
             this.pictureBox12 = new System.Windows.Forms.PictureBox();
             this.pictureBox6 = new System.Windows.Forms.PictureBox();
@@ -75,11 +79,6 @@
             this.button10 = new System.Windows.Forms.Button();
             this.button9 = new System.Windows.Forms.Button();
             this.button8 = new System.Windows.Forms.Button();
-            this.pictureBox14 = new System.Windows.Forms.PictureBox();
-            this.pictureBox13 = new System.Windows.Forms.PictureBox();
-            this.button7 = new System.Windows.Forms.Button();
-            this.button6 = new System.Windows.Forms.Button();
-            this.button5 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -87,6 +86,7 @@
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.irAInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corteDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.lblCambio = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panelComida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -101,13 +101,13 @@
             this.panelBebidas.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panelPromociones.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).BeginInit();
             this.panel1.SuspendLayout();
             this.menuOpciones.SuspendLayout();
             this.SuspendLayout();
@@ -212,15 +212,6 @@
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
-            // lblCambio
-            // 
-            this.lblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCambio.Location = new System.Drawing.Point(9, 238);
-            this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new System.Drawing.Size(100, 23);
-            this.lblCambio.TabIndex = 3;
-            this.lblCambio.Text = "Pago con:";
-            // 
             // ListaVenta
             // 
             this.ListaVenta.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -252,7 +243,7 @@
             this.panel4.Location = new System.Drawing.Point(4, -1);
             this.panel4.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(1367, 90);
+            this.panel4.Size = new System.Drawing.Size(1237, 90);
             this.panel4.TabIndex = 19;
             // 
             // btnRegreso
@@ -583,6 +574,70 @@
             this.pictureBox15.TabIndex = 23;
             this.pictureBox15.TabStop = false;
             // 
+            // pictureBox14
+            // 
+            this.pictureBox14.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.agua;
+            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox14.Location = new System.Drawing.Point(233, 230);
+            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox14.Name = "pictureBox14";
+            this.pictureBox14.Size = new System.Drawing.Size(159, 99);
+            this.pictureBox14.TabIndex = 22;
+            this.pictureBox14.TabStop = false;
+            // 
+            // pictureBox13
+            // 
+            this.pictureBox13.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.cocacola;
+            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.pictureBox13.Location = new System.Drawing.Point(25, 41);
+            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
+            this.pictureBox13.Name = "pictureBox13";
+            this.pictureBox13.Size = new System.Drawing.Size(159, 99);
+            this.pictureBox13.TabIndex = 21;
+            this.pictureBox13.TabStop = false;
+            // 
+            // button7
+            // 
+            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button7.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button7.Location = new System.Drawing.Point(428, 28);
+            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button7.Name = "button7";
+            this.button7.Size = new System.Drawing.Size(184, 166);
+            this.button7.TabIndex = 20;
+            this.button7.Text = "\r\n\r\n\r\n\r\n\r\n\r\nJumex 20$\r\n ";
+            this.button7.UseVisualStyleBackColor = true;
+            this.button7.Click += new System.EventHandler(this.button7_Click_1);
+            // 
+            // button6
+            // 
+            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button6.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button6.Location = new System.Drawing.Point(221, 214);
+            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button6.Name = "button6";
+            this.button6.Size = new System.Drawing.Size(184, 166);
+            this.button6.TabIndex = 19;
+            this.button6.Text = "\r\n\r\n\r\n\r\n\r\n\r\nAgua 15$\r\n  ";
+            this.button6.UseVisualStyleBackColor = true;
+            this.button6.Click += new System.EventHandler(this.button6_Click);
+            // 
+            // button5
+            // 
+            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button5.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.button5.Location = new System.Drawing.Point(221, 28);
+            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
+            this.button5.Name = "button5";
+            this.button5.Size = new System.Drawing.Size(184, 166);
+            this.button5.TabIndex = 18;
+            this.button5.Text = " \r\n\r\n\r\n\r\n\r\n\r\n  Sprite 25$\r\n    \r\n\r\n\r\n    \r\n\r\n    \r\n";
+            this.button5.UseVisualStyleBackColor = true;
+            this.button5.Click += new System.EventHandler(this.button5_Click);
+            // 
             // panelPromociones
             // 
             this.panelPromociones.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
@@ -689,70 +744,6 @@
             this.button8.Text = "\r\n\r\n\r\n\r\n\r\n\r\ncombo feliz 120$";
             this.button8.UseVisualStyleBackColor = true;
             // 
-            // pictureBox14
-            // 
-            this.pictureBox14.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.agua;
-            this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox14.Location = new System.Drawing.Point(233, 230);
-            this.pictureBox14.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(159, 99);
-            this.pictureBox14.TabIndex = 22;
-            this.pictureBox14.TabStop = false;
-            // 
-            // pictureBox13
-            // 
-            this.pictureBox13.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.cocacola;
-            this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox13.Location = new System.Drawing.Point(25, 41);
-            this.pictureBox13.Margin = new System.Windows.Forms.Padding(4);
-            this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(159, 99);
-            this.pictureBox13.TabIndex = 21;
-            this.pictureBox13.TabStop = false;
-            // 
-            // button7
-            // 
-            this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button7.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(428, 28);
-            this.button7.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(184, 166);
-            this.button7.TabIndex = 20;
-            this.button7.Text = "\r\n\r\n\r\n\r\n\r\n\r\nJumex 20$\r\n ";
-            this.button7.UseVisualStyleBackColor = true;
-            this.button7.Click += new System.EventHandler(this.button7_Click_1);
-            // 
-            // button6
-            // 
-            this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button6.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(221, 214);
-            this.button6.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(184, 166);
-            this.button6.TabIndex = 19;
-            this.button6.Text = "\r\n\r\n\r\n\r\n\r\n\r\nAgua 15$\r\n  ";
-            this.button6.UseVisualStyleBackColor = true;
-            this.button6.Click += new System.EventHandler(this.button6_Click);
-            // 
-            // button5
-            // 
-            this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.button5.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(221, 28);
-            this.button5.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
-            this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(184, 166);
-            this.button5.TabIndex = 18;
-            this.button5.Text = " \r\n\r\n\r\n\r\n\r\n\r\n  Sprite 25$\r\n    \r\n\r\n\r\n    \r\n\r\n    \r\n";
-            this.button5.UseVisualStyleBackColor = true;
-            this.button5.Click += new System.EventHandler(this.button5_Click);
-            // 
             // label1
             // 
             this.label1.AutoSize = true;
@@ -772,8 +763,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel1.Controls.Add(this.ListaVenta);
             this.panel1.Controls.Add(this.lblCambio);
+            this.panel1.Controls.Add(this.ListaVenta);
             this.panel1.Controls.Add(this.lblTotal);
             this.panel1.Controls.Add(this.btnEliminar);
             this.panel1.Controls.Add(this.button1);
@@ -788,10 +779,10 @@
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel2.Location = new System.Drawing.Point(4, 87);
+            this.panel2.Location = new System.Drawing.Point(4, -1);
             this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(65, 541);
+            this.panel2.Size = new System.Drawing.Size(65, 629);
             this.panel2.TabIndex = 27;
             // 
             // menuOpciones
@@ -828,14 +819,24 @@
             this.corteDeCajaToolStripMenuItem.Text = "Corte de caja";
             this.corteDeCajaToolStripMenuItem.Click += new System.EventHandler(this.corteDeCajaToolStripMenuItem_Click);
             // 
+            // lblCambio
+            // 
+            this.lblCambio.AutoSize = true;
+            this.lblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambio.Location = new System.Drawing.Point(13, 240);
+            this.lblCambio.Name = "lblCambio";
+            this.lblCambio.Size = new System.Drawing.Size(77, 16);
+            this.lblCambio.TabIndex = 21;
+            this.lblCambio.Text = "Pago con:";
+            this.lblCambio.Click += new System.EventHandler(this.lblCambio_Click_1);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(1420, 597);
+            this.ClientSize = new System.Drawing.Size(1221, 597);
             this.Controls.Add(this.panelPostres);
-            this.Controls.Add(this.panel2);
             this.Controls.Add(this.panelPromociones);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.panel1);
@@ -846,6 +847,7 @@
             this.Controls.Add(this.btnPostres);
             this.Controls.Add(this.btnComida);
             this.Controls.Add(this.panel4);
+            this.Controls.Add(this.panel2);
             this.Enabled = false;
             this.ForeColor = System.Drawing.SystemColors.ControlText;
             this.Margin = new System.Windows.Forms.Padding(3, 2, 3, 2);
@@ -868,13 +870,13 @@
             this.panelBebidas.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox16)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox15)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panelPromociones.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox12)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox6)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox3)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox14)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox13)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.menuOpciones.ResumeLayout(false);
@@ -893,7 +895,6 @@
         private System.Windows.Forms.Button BtnBanderilla;
         private System.Windows.Forms.TextBox txtPago;
         private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.Label lblCambio;
         private System.Windows.Forms.CheckedListBox ListaVenta;
         private System.Windows.Forms.Button btnEliminar;
         private System.Windows.Forms.Panel panel3;
@@ -942,6 +943,7 @@
         private System.Windows.Forms.PictureBox pictureBox16;
         private System.Windows.Forms.PictureBox pictureBox15;
         private System.Windows.Forms.PictureBox pictureBox14;
+        private System.Windows.Forms.Label lblCambio;
     }
 }
 
