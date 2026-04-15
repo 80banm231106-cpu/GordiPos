@@ -26,15 +26,15 @@ namespace interfaz_de_caja_registradora
         private void CorteDeCaja_Load(object sender, EventArgs e)
         {
             // 2. Llenamos los Labels con nuestros datos "fake"
-            // lblCajero.Text = "Cajero: admin"; // Tu usuario provisional
+             lblCajero.Text = "Cajero: admin"; // Tu usuario provisional
 
             // El ToString("C") formatea el número automáticamente con el signo de $ y decimales
-            //lblFondoInicial.Text = fondoInicial.ToString("C");
-            //lblVentasEfectivo.Text = ventasDelDia.ToString("C");
+            txtFondoinicial.Text = fondoInicial.ToString("C");
+            txtVentastotales.Text = ventasDelDia.ToString("C");
 
             // 3. Calculamos cuánto dinero DEBERÍA haber en la caja
-            //totalEsperado = fondoInicial + ventasDelDia;
-            //lblTotalEsperado.Text = totalEsperado.ToString("C");
+            totalEsperado = fondoInicial + ventasDelDia;
+            txtTotalesperado.Text = totalEsperado.ToString("C");
         }
 
         private void txtEfectivoContado_TextChanged(object sender, EventArgs e)
