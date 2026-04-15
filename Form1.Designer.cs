@@ -753,16 +753,16 @@
             // 
             this.lblCambio.AutoSize = true;
             this.lblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-<<<<<<< HEAD
+
             this.lblCambio.Location = new System.Drawing.Point(13, 240);
             this.lblCambio.Name = "lblCambio";
             this.lblCambio.Size = new System.Drawing.Size(77, 16);
-=======
+
             this.lblCambio.Location = new System.Drawing.Point(10, 195);
             this.lblCambio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCambio.Name = "lblCambio";
             this.lblCambio.Size = new System.Drawing.Size(65, 13);
->>>>>>> 2280a4269487bc4b455dfab302daafcb164d5ccd
+
             this.lblCambio.TabIndex = 21;
             this.lblCambio.Text = "Pago con:";
             this.lblCambio.Click += new System.EventHandler(this.lblCambio_Click_1);
