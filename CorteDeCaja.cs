@@ -124,5 +124,10 @@ namespace interfaz_de_caja_registradora
         {
 
         }
+
+        private void label4_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }

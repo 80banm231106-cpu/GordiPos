@@ -28,10 +28,6 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.lblCajero = new System.Windows.Forms.Label();
-            this.lblFondoInicial = new System.Windows.Forms.Label();
-            this.lblVentasEfectivo = new System.Windows.Forms.Label();
-            this.lblTotalEsperado = new System.Windows.Forms.Label();
             this.txtEfectivoContado = new System.Windows.Forms.TextBox();
             this.lblDiferencia = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
@@ -57,51 +53,11 @@
             this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
-            // lblCajero
-            // 
-            this.lblCajero.AutoSize = true;
-            this.lblCajero.Location = new System.Drawing.Point(992, 533);
-            this.lblCajero.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblCajero.Name = "lblCajero";
-            this.lblCajero.Size = new System.Drawing.Size(47, 16);
-            this.lblCajero.TabIndex = 0;
-            this.lblCajero.Text = "Cajero";
-            // 
-            // lblFondoInicial
-            // 
-            this.lblFondoInicial.AutoSize = true;
-            this.lblFondoInicial.Location = new System.Drawing.Point(1092, 444);
-            this.lblFondoInicial.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblFondoInicial.Name = "lblFondoInicial";
-            this.lblFondoInicial.Size = new System.Drawing.Size(34, 16);
-            this.lblFondoInicial.TabIndex = 1;
-            this.lblFondoInicial.Text = ".........";
-            // 
-            // lblVentasEfectivo
-            // 
-            this.lblVentasEfectivo.AutoSize = true;
-            this.lblVentasEfectivo.Location = new System.Drawing.Point(1119, 480);
-            this.lblVentasEfectivo.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblVentasEfectivo.Name = "lblVentasEfectivo";
-            this.lblVentasEfectivo.Size = new System.Drawing.Size(34, 16);
-            this.lblVentasEfectivo.TabIndex = 2;
-            this.lblVentasEfectivo.Text = ".........";
-            // 
-            // lblTotalEsperado
-            // 
-            this.lblTotalEsperado.AutoSize = true;
-            this.lblTotalEsperado.Location = new System.Drawing.Point(1119, 533);
-            this.lblTotalEsperado.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
-            this.lblTotalEsperado.Name = "lblTotalEsperado";
-            this.lblTotalEsperado.Size = new System.Drawing.Size(34, 16);
-            this.lblTotalEsperado.TabIndex = 3;
-            this.lblTotalEsperado.Text = ".........";
-            // 
             // txtEfectivoContado
             // 
             this.txtEfectivoContado.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.txtEfectivoContado.Location = new System.Drawing.Point(205, 84);
-            this.txtEfectivoContado.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtEfectivoContado.Margin = new System.Windows.Forms.Padding(4);
             this.txtEfectivoContado.Name = "txtEfectivoContado";
             this.txtEfectivoContado.Size = new System.Drawing.Size(243, 22);
             this.txtEfectivoContado.TabIndex = 4;
@@ -115,9 +71,9 @@
             this.lblDiferencia.Location = new System.Drawing.Point(167, 11);
             this.lblDiferencia.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.lblDiferencia.Name = "lblDiferencia";
-            this.lblDiferencia.Size = new System.Drawing.Size(257, 39);
+            this.lblDiferencia.Size = new System.Drawing.Size(287, 39);
             this.lblDiferencia.TabIndex = 5;
-            this.lblDiferencia.Text = "DIFERENCIA: ";
+            this.lblDiferencia.Text = "   DIFERENCIA: ";
             // 
             // label1
             // 
@@ -157,7 +113,7 @@
             this.btnFinalizarCorte.FlatStyle = System.Windows.Forms.FlatStyle.System;
             this.btnFinalizarCorte.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnFinalizarCorte.Location = new System.Drawing.Point(39, 334);
-            this.btnFinalizarCorte.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnFinalizarCorte.Margin = new System.Windows.Forms.Padding(4);
             this.btnFinalizarCorte.Name = "btnFinalizarCorte";
             this.btnFinalizarCorte.Size = new System.Drawing.Size(179, 89);
             this.btnFinalizarCorte.TabIndex = 9;
@@ -171,7 +127,7 @@
             this.panel1.Controls.Add(this.label9);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Location = new System.Drawing.Point(1, 2);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(1175, 92);
             this.panel1.TabIndex = 10;
@@ -179,27 +135,28 @@
             // label9
             // 
             this.label9.AutoSize = true;
-            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 21.75F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label9.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label9.ForeColor = System.Drawing.Color.White;
             this.label9.Location = new System.Drawing.Point(29, 26);
             this.label9.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(198, 42);
+            this.label9.Size = new System.Drawing.Size(213, 46);
             this.label9.TabIndex = 1;
             this.label9.Text = "Gordi Feliz";
             // 
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 24F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label4.ForeColor = System.Drawing.Color.White;
-            this.label4.Location = new System.Drawing.Point(485, 22);
+            this.label4.ImageAlign = System.Drawing.ContentAlignment.TopRight;
+            this.label4.Location = new System.Drawing.Point(480, 26);
             this.label4.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(276, 48);
+            this.label4.Size = new System.Drawing.Size(274, 46);
             this.label4.TabIndex = 0;
             this.label4.Text = "Corte De Caja";
+            this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
             // panel2
             // 
@@ -213,7 +170,7 @@
             this.panel2.Controls.Add(this.label2);
             this.panel2.Controls.Add(this.label3);
             this.panel2.Location = new System.Drawing.Point(299, 114);
-            this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel2.Margin = new System.Windows.Forms.Padding(4);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(632, 184);
             this.panel2.TabIndex = 11;
@@ -222,7 +179,7 @@
             // 
             this.textBox3.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox3.Location = new System.Drawing.Point(447, 135);
-            this.textBox3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox3.Margin = new System.Windows.Forms.Padding(4);
             this.textBox3.Name = "textBox3";
             this.textBox3.Size = new System.Drawing.Size(132, 22);
             this.textBox3.TabIndex = 12;
@@ -231,7 +188,7 @@
             // 
             this.textBox2.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox2.Location = new System.Drawing.Point(447, 95);
-            this.textBox2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox2.Margin = new System.Windows.Forms.Padding(4);
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(132, 22);
             this.textBox2.TabIndex = 11;
@@ -240,7 +197,7 @@
             // 
             this.textBox1.BackColor = System.Drawing.SystemColors.ScrollBar;
             this.textBox1.Location = new System.Drawing.Point(447, 52);
-            this.textBox1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.textBox1.Margin = new System.Windows.Forms.Padding(4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(132, 22);
             this.textBox1.TabIndex = 10;
@@ -267,7 +224,7 @@
             this.panel3.Controls.Add(this.label6);
             this.panel3.Controls.Add(this.txtEfectivoContado);
             this.panel3.Location = new System.Drawing.Point(299, 311);
-            this.panel3.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel3.Margin = new System.Windows.Forms.Padding(4);
             this.panel3.Name = "panel3";
             this.panel3.Size = new System.Drawing.Size(632, 148);
             this.panel3.TabIndex = 12;
@@ -310,10 +267,10 @@
             this.panel4.BackColor = System.Drawing.Color.White;
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel4.Controls.Add(this.lblDiferencia);
-            this.panel4.Location = new System.Drawing.Point(323, 480);
-            this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel4.Location = new System.Drawing.Point(299, 480);
+            this.panel4.Margin = new System.Windows.Forms.Padding(4);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(584, 163);
+            this.panel4.Size = new System.Drawing.Size(632, 148);
             this.panel4.TabIndex = 13;
             // 
             // CorteDeCaja
@@ -327,11 +284,7 @@
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnFinalizarCorte);
-            this.Controls.Add(this.lblTotalEsperado);
-            this.Controls.Add(this.lblVentasEfectivo);
-            this.Controls.Add(this.lblFondoInicial);
-            this.Controls.Add(this.lblCajero);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "CorteDeCaja";
             this.Text = "CorteDeCaja";
             this.Load += new System.EventHandler(this.CorteDeCaja_Load);
@@ -344,16 +297,10 @@
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
             this.ResumeLayout(false);
-            this.PerformLayout();
 
         }
 
         #endregion
-
-        private System.Windows.Forms.Label lblCajero;
-        private System.Windows.Forms.Label lblFondoInicial;
-        private System.Windows.Forms.Label lblVentasEfectivo;
-        private System.Windows.Forms.Label lblTotalEsperado;
         private System.Windows.Forms.TextBox txtEfectivoContado;
         private System.Windows.Forms.Label lblDiferencia;
         private System.Windows.Forms.Label label1;

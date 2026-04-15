@@ -81,12 +81,12 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.lblCambio = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuOpciones = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.cerrarSesionToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.irAInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corteDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.lblCambio = new System.Windows.Forms.Label();
             this.panel4.SuspendLayout();
             this.panelComida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -775,6 +775,17 @@
             this.panel1.Size = new System.Drawing.Size(321, 429);
             this.panel1.TabIndex = 26;
             // 
+            // lblCambio
+            // 
+            this.lblCambio.AutoSize = true;
+            this.lblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblCambio.Location = new System.Drawing.Point(13, 240);
+            this.lblCambio.Name = "lblCambio";
+            this.lblCambio.Size = new System.Drawing.Size(77, 16);
+            this.lblCambio.TabIndex = 21;
+            this.lblCambio.Text = "Pago con:";
+            this.lblCambio.Click += new System.EventHandler(this.lblCambio_Click_1);
+            // 
             // panel2
             // 
             this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
@@ -818,17 +829,6 @@
             this.corteDeCajaToolStripMenuItem.Size = new System.Drawing.Size(215, 32);
             this.corteDeCajaToolStripMenuItem.Text = "Corte de caja";
             this.corteDeCajaToolStripMenuItem.Click += new System.EventHandler(this.corteDeCajaToolStripMenuItem_Click);
-            // 
-            // lblCambio
-            // 
-            this.lblCambio.AutoSize = true;
-            this.lblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCambio.Location = new System.Drawing.Point(13, 240);
-            this.lblCambio.Name = "lblCambio";
-            this.lblCambio.Size = new System.Drawing.Size(77, 16);
-            this.lblCambio.TabIndex = 21;
-            this.lblCambio.Text = "Pago con:";
-            this.lblCambio.Click += new System.EventHandler(this.lblCambio_Click_1);
             // 
             // Form1
             // 
