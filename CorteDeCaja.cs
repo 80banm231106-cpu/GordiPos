@@ -25,7 +25,8 @@ namespace interfaz_de_caja_registradora
 
         private void CorteDeCaja_Load(object sender, EventArgs e)
         {
-            // 2. Llenamos los Labels con nuestros datos "fake"
+            
+           // 2. Llenamos los Labels con nuestros datos "fake"
              lblCajero.Text = "Cajero: admin"; // Tu usuario provisional
 
             // El ToString("C") formatea el número automáticamente con el signo de $ y decimales

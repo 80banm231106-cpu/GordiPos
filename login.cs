@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,56 +23,64 @@ namespace interfaz_de_caja_registradora
 
         private void btnLogin_Click(object sender, EventArgs e)
         {
-            if (bloqueado)
-                return;
+            // --- INICIA LA CONEXIÓN A LA BASE DE DATOS ---
+            ConexionBD bd = new ConexionBD();
+            bd.abrir();
 
-            string usuario = txtUsuario.Text;
-            string contraseña = txtContraseña.Text;
+            // 1. Le decimos a C# que llame a tu Procedimiento Almacenado por su nombre
+            MySqlCommand comando = new MySqlCommand("login_usuario", bd.conectar);
 
-            if (usuario == "1" && contraseña == "1")
+            // 2. ¡Súper importante! Le avisamos que NO es un texto normal, sino un Procedure
+            comando.CommandType = System.Data.CommandType.StoredProcedure;
+
+            // 3. Le pasamos los parámetros usando los nombres EXACTOS que pusiste en MySQL (p_usuario y p_contraseña)
+            comando.Parameters.AddWithValue("p_usuario", txtUsuario.Text.Trim());
+            comando.Parameters.AddWithValue("p_contraseña", txtContraseña.Text.Trim());
+
+            MySqlDataReader lector = comando.ExecuteReader();
+
+            if (lector.HasRows)
             {
                 intento = 0;
-
-                Form1 caja = new Form1();
                 this.Hide();
-                caja.Enabled = true;
-                caja.ShowDialog();
-                txtUsuario.Clear();     // Opcional: Limpiamos la caja de usuario
-                txtContraseña.Clear();  // Opcional: Limpiamos la caja de contraseña para que no se quede guardada
+
+                // 1. Abrimos la ventanita de Apertura
+                AperturaCaja apertura = new AperturaCaja();
+                apertura.ShowDialog(); // El código se pausa aquí hasta que el cajero la cierre
+
+                // 2. Revisamos si la bandera se encendió
+                if (apertura.aperturaExitosa == true)
+                {
+                    // ¡Todo salió perfecto! Abrimos el punto de venta
+                    Form1 menuPrincipal = new Form1();
+                    menuPrincipal.ShowDialog();
+                }
+
+                // 3. Cuando terminen de usar el punto de venta, regresamos todo a la normalidad
+                txtUsuario.Clear();
+                txtContraseña.Clear();
                 this.Show();
             }
             else
             {
+                // ¡Fallo! El usuario no existe o la contraseña está mal
                 intento++;
-                MessageBox.Show("Usuario o contraseña incorrectos.");
+                MessageBox.Show("Usuario o contraseña incorrectos. Intento " + intento + " de 3.");
 
                 if (intento >= 3)
                 {
                     IniciarBloqueo();
                 }
             }
+
+            // Siempre cerramos la conexión al terminar
+            bd.cerrar();
+            // --- TERMINA LA CONEXIÓN A LA BASE DE DATOS ---
         }
 
         private void timerBloqueo_Tick(object sender, EventArgs e)
         {
-            tiempoRestante--;
-
-            lblBloqueo.Text = "Sistema bloqueado: " + tiempoRestante + " segundos";
-
-            if (tiempoRestante <= 0)
-            {
-                timerBloqueo.Stop();
-
-                bloqueado = false;
-                intento = 0;
-                tiempoRestante = 10;
-
-                btnLogin.Enabled = true;
-                txtUsuario.Enabled = true;
-                txtContraseña.Enabled = true;
-
-                lblBloqueo.Text = "Puedes intentar nuevamente.";
-            }
+           
         }
 
         private void lblBloqueo_Click(object sender, EventArgs e)
@@ -79,16 +88,39 @@ namespace interfaz_de_caja_registradora
 
         }
 
+        // 4. MÉTODO DE PERDÓN
+        private void DesbloquearSistema(object sender, EventArgs e)
+        {
+            Timer timer = (Timer)sender;
+            timer.Stop();
+
+            bloqueado = false;
+            intento = 0;
+
+            txtUsuario.Enabled = true;
+            txtContraseña.Enabled = true;
+            btnLogin.Enabled = true;
+
+            txtUsuario.Clear();
+            txtContraseña.Clear();
+            txtUsuario.Focus();
+
+            MessageBox.Show("Sistema desbloqueado.", "Información", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
         private void IniciarBloqueo()
         {
             bloqueado = true;
-
-            btnLogin.Enabled = false;
             txtUsuario.Enabled = false;
             txtContraseña.Enabled = false;
+            // Asegúrate de que este sea el nombre real de tu botón de entrar:
+            btnLogin.Enabled = false;
 
-            lblBloqueo.Text = "Sistema bloqueado: 10 segundos";
+            MessageBox.Show("Sistema bloqueado por 30 segundos por seguridad.", "Seguridad", MessageBoxButtons.OK, MessageBoxIcon.Error);
 
+            Timer timerBloqueo = new Timer();
+            timerBloqueo.Interval = 30000; // 30 segundos
+            timerBloqueo.Tick += DesbloquearSistema;
             timerBloqueo.Start();
         }
 

@@ -29,7 +29,7 @@
         private void InitializeComponent()
         {
             this.label1 = new System.Windows.Forms.Label();
-            this.txtFondoApertura = new System.Windows.Forms.TextBox();
+            this.txtFondo = new System.Windows.Forms.TextBox();
             this.btnAbrirCaja = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label2 = new System.Windows.Forms.Label();
@@ -47,24 +47,25 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese fondo inicial de caja:";
             // 
-            // txtFondoApertura
+            // txtFondo
             // 
-            this.txtFondoApertura.Location = new System.Drawing.Point(131, 165);
-            this.txtFondoApertura.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
-            this.txtFondoApertura.Name = "txtFondoApertura";
-            this.txtFondoApertura.Size = new System.Drawing.Size(184, 22);
-            this.txtFondoApertura.TabIndex = 1;
+            this.txtFondo.Location = new System.Drawing.Point(131, 165);
+            this.txtFondo.Margin = new System.Windows.Forms.Padding(4);
+            this.txtFondo.Name = "txtFondo";
+            this.txtFondo.Size = new System.Drawing.Size(184, 22);
+            this.txtFondo.TabIndex = 1;
             // 
             // btnAbrirCaja
             // 
             this.btnAbrirCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnAbrirCaja.Location = new System.Drawing.Point(131, 230);
-            this.btnAbrirCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAbrirCaja.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbrirCaja.Name = "btnAbrirCaja";
             this.btnAbrirCaja.Size = new System.Drawing.Size(185, 87);
             this.btnAbrirCaja.TabIndex = 2;
             this.btnAbrirCaja.Text = "Comenzar turno";
             this.btnAbrirCaja.UseVisualStyleBackColor = true;
+            this.btnAbrirCaja.Click += new System.EventHandler(this.btnAbrirCaja_Click);
             // 
             // panel1
             // 
@@ -72,7 +73,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(-23, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(508, 67);
             this.panel1.TabIndex = 3;
@@ -96,9 +97,9 @@
             this.ClientSize = new System.Drawing.Size(443, 380);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAbrirCaja);
-            this.Controls.Add(this.txtFondoApertura);
+            this.Controls.Add(this.txtFondo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AperturaCaja";
             this.Text = "AperturaCaja";
             this.Load += new System.EventHandler(this.AperturaCaja_Load);
@@ -112,7 +113,7 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.TextBox txtFondoApertura;
+        private System.Windows.Forms.TextBox txtFondo;
         private System.Windows.Forms.Button btnAbrirCaja;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label2;

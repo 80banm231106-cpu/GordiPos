@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -22,6 +23,11 @@ namespace interfaz_de_caja_registradora
         int contadorPapas = 0;
         bool SugerenciaMostrada = false;
 
+        // Variables para recordar los datos y mandarlos al ticket
+        int ticketId = 0;
+        double ticketPago = 0;
+        double ticketCambio = 0;
+
         private void AgregarProducto(string nombre, double precio)
         {
             ListaVenta.Items.Add(nombre + " - $" + precio);
@@ -29,6 +35,64 @@ namespace interfaz_de_caja_registradora
             total += precio;
 
             lblTotal.Text = "Total: $" + total;
+        }
+
+        private void FormatoTicket(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            // 1. Configuramos las fuentes (Tipografías)
+            Font fuenteTitulo = new Font("Courier New", 14, FontStyle.Bold);
+            Font fuenteNormal = new Font("Courier New", 10, FontStyle.Regular);
+            Font fuentePequeña = new Font("Courier New", 8, FontStyle.Regular);
+
+            // Margen izquierdo y posición inicial desde arriba (Eje Y)
+            int margenIzq = 10;
+            int y = 20;
+
+            // --- ENCABEZADO ---
+            e.Graphics.DrawString("🍔 GORDIFELIZ 🍔", fuenteTitulo, Brushes.Black, margenIzq + 30, y);
+            y += 25;
+            e.Graphics.DrawString("Ticket Folio: #" + ticketId, fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 20;
+            e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm"), fuentePequeña, Brushes.Black, margenIzq, y);
+            y += 25;
+            e.Graphics.DrawString("--------------------------------", fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 20;
+
+            // --- DETALLE DE PRODUCTOS ---
+            e.Graphics.DrawString("CANT  DESCRIPCIÓN       PRECIO", fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 20;
+            e.Graphics.DrawString("--------------------------------", fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 20;
+
+            foreach (var item in ListaVenta.Items)
+            {
+                // Separamos el nombre del precio (Ej: "Hamburguesa - $80")
+                string[] partes = item.ToString().Split('-');
+                string nombre = partes[0].Trim();
+                string precio = partes[1].Trim();
+
+                // Si el nombre es muy largo, lo cortamos para que no desacomode el ticket
+                if (nombre.Length > 15) nombre = nombre.Substring(0, 15);
+
+                // Acomodamos en columnas: 1 | Producto | Precio
+                string lineaProducto = $"1    {nombre,-15} {precio}";
+                e.Graphics.DrawString(lineaProducto, fuenteNormal, Brushes.Black, margenIzq, y);
+                y += 20; // Bajamos 20 pixeles para el siguiente producto
+            }
+
+            // --- TOTALES ---
+            y += 10;
+            e.Graphics.DrawString("--------------------------------", fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 20;
+            e.Graphics.DrawString("TOTAL:          $" + total.ToString("0.00"), fuenteTitulo, Brushes.Black, margenIzq, y);
+            y += 25;
+            e.Graphics.DrawString("PAGÓ CON:       $" + ticketPago.ToString("0.00"), fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 20;
+            e.Graphics.DrawString("SU CAMBIO:      $" + ticketCambio.ToString("0.00"), fuenteNormal, Brushes.Black, margenIzq, y);
+
+            // --- PIE DE PÁGINA ---
+            y += 40;
+            e.Graphics.DrawString("¡Gracias por su preferencia!", fuenteNormal, Brushes.Black, margenIzq + 10, y);
         }
         private void VerificarSugerencias()
         {
@@ -142,29 +206,103 @@ namespace interfaz_de_caja_registradora
         private void button1_Click(object sender, EventArgs e)
         {
             double pago;
-
-            if (!double.TryParse(txtPago.Text.Trim(), out pago))
+            if (!double.TryParse(txtPago.Text.Trim(), out pago) || pago < total)
             {
-                MessageBox.Show("Ingresa una cantidad");
+                MessageBox.Show("Pago insuficiente o inválido.");
                 return;
             }
 
-            if (pago < total)
-            {
-                MessageBox.Show("El pago es insuficiente");
-                return;
-            }
-
+            // 1. Calculamos el cambio ANTES de guardar en la base de datos
             double cambio = pago - total;
-            lblCambio.Text = "Cambio: $" + cambio;
+            lblCambio.Text = "Cambio: $" + cambio.ToString("0.00");
+            lblCambio.Refresh(); // Forzamos a que se muestre en pantalla rápido
 
-            MessageBox.Show("Pago realizado con éxito");
+            ConexionBD bd = new ConexionBD();
+            bd.abrir();
 
-            ListaVenta.Items.Clear();
-            total = 0;
-            lblTotal.Text = "Total: $0";
-            txtPago.Clear();
-            lblCambio.Text = "Cambio: $0";
+            MySqlTransaction transaccion = bd.conectar.BeginTransaction();
+
+            try
+            {
+                // 2. REGISTRAR LA VENTA GENERAL
+                string sqlVenta = "INSERT INTO ventas (total) VALUES (@total); SELECT LAST_INSERT_ID();";
+                MySqlCommand cmdVenta = new MySqlCommand(sqlVenta, bd.conectar, transaccion);
+                cmdVenta.Parameters.AddWithValue("@total", total);
+                int idVentaGenerada = Convert.ToInt32(cmdVenta.ExecuteScalar());
+
+                // 3. REGISTRAR CADA PRODUCTO
+                foreach (var item in ListaVenta.Items)
+                {
+                    string nombreProducto = item.ToString().Split('-')[0].Trim();
+
+                    string sqlBuscaId = "SELECT id_producto FROM producto WHERE nombre = @nom LIMIT 1";
+                    MySqlCommand cmdBusca = new MySqlCommand(sqlBuscaId, bd.conectar, transaccion);
+                    cmdBusca.Parameters.AddWithValue("@nom", nombreProducto);
+                    int idProducto = Convert.ToInt32(cmdBusca.ExecuteScalar());
+
+                    string sqlDetalle = "INSERT INTO detalle_venta (id_venta, id_producto, cantidad) VALUES (@idV, @idP, 1)";
+                    MySqlCommand cmdDetalle = new MySqlCommand(sqlDetalle, bd.conectar, transaccion);
+                    cmdDetalle.Parameters.AddWithValue("@idV", idVentaGenerada);
+                    cmdDetalle.Parameters.AddWithValue("@idP", idProducto);
+
+                    cmdDetalle.ExecuteNonQuery();
+                }
+
+                // 4. MANDAR A COCINA
+                if (ListaVenta.Items.Count > 0)
+                {
+                    string textoPedido = "Pedido #" + DatosCocina.NumeroPedidoActual + ": ";
+                    foreach (var item in ListaVenta.Items)
+                    {
+                        string soloComida = item.ToString().Split('-')[0].Trim();
+                        textoPedido += soloComida + " | ";
+                    }
+                    DatosCocina.PedidosEnEspera.Add(textoPedido);
+                    DatosCocina.NumeroPedidoActual++;
+                }
+
+                // 5. CONFIRMAR TRANSACCIÓN
+                transaccion.Commit();
+
+                // 6. Mostrar éxito con el cambio incluido
+                MessageBox.Show($"Venta realizada con éxito.\n\nCambio a devolver: ${cambio.ToString("0.00")}", "Venta Completada", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                // ---> NUEVO: GENERAR EL TICKET <---
+                // Guardamos los datos temporalmente
+                ticketId = idVentaGenerada;
+                ticketPago = pago;
+                ticketCambio = cambio;
+
+                // Preparamos el documento
+                System.Drawing.Printing.PrintDocument doc = new System.Drawing.Printing.PrintDocument();
+                doc.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(FormatoTicket);
+
+                // Mostramos la vista previa en pantalla
+                PrintPreviewDialog vistaPrevia = new PrintPreviewDialog();
+                vistaPrevia.Document = doc;
+                vistaPrevia.ShowDialog();
+                // ----------------------------------
+
+                // 7. Limpiar pantalla directamente (sin métodos extra)
+                ListaVenta.Items.Clear();
+                // ... (resto de tu código de limpieza)
+
+                // 7. Limpiar pantalla directamente (sin métodos extra)
+                ListaVenta.Items.Clear();
+                total = 0;
+                lblTotal.Text = "Total: $0";
+                txtPago.Clear();
+                lblCambio.Text = "Cambio: $0";
+            }
+            catch (MySqlException ex)
+            {
+                transaccion.Rollback();
+                MessageBox.Show("Error al cobrar: " + ex.Message, "Falta Inventario", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+            finally
+            {
+                bd.cerrar();
+            }
         }
         private void btnEliminar_Click(object sender, EventArgs e)
         {
@@ -440,38 +578,7 @@ namespace interfaz_de_caja_registradora
 
         private void lblCambio_Click_1(object sender, EventArgs e)
         {
-            double pago;
-
-            if (!double.TryParse(txtPago.Text.Trim(), out pago))
-            {
-                MessageBox.Show("Ingresa una cantidad");
-                return;
-            }
-
-            if (pago < total)
-            {
-                MessageBox.Show("El pago es insuficiente");
-                return;
-            }
-
-            // 1. Calculas el cambio
-            double cambio = pago - total;
-
-            // 2. Actualizas el texto de la etiqueta (formateado a 2 decimales para dinero)
-            lblCambio.Text = "Cambio: $" + cambio.ToString("0.00");
-
-            // 3. ¡LA CLAVE!: Fuerzas a la interfaz a dibujarlo antes de que se pause
-            lblCambio.Refresh();
-
-            // 4. (Opcional pero recomendado) Muestras el cambio también en el mensaje
-            MessageBox.Show($"Pago realizado con éxito.\n\nCambio a devolver: ${cambio.ToString("0.00")}", "Venta Completada");
-
-            // --- Limpieza del formulario ---
-            ListaVenta.Items.Clear();
-            total = 0;
-            lblTotal.Text = "Total: $0";
-            txtPago.Clear();
-            lblCambio.Text = "Cambio: $0";
+         
         }
 
         private void button8_Click(object sender, EventArgs e)
