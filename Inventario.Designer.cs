@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
@@ -45,6 +46,11 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
+<<<<<<< HEAD
+=======
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRegreso = new System.Windows.Forms.Button();
+>>>>>>> a73335369d48cb6a579924387c5125fc6227a7d6
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -60,7 +66,11 @@
             this.dataGridView1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
+<<<<<<< HEAD
             this.dataGridView1.Size = new System.Drawing.Size(675, 423);
+=======
+            this.dataGridView1.Size = new System.Drawing.Size(427, 344);
+>>>>>>> a73335369d48cb6a579924387c5125fc6227a7d6
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -68,6 +78,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnRegreso);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-35, 1);
             this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -97,8 +108,12 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Controls.Add(this.label2);
+<<<<<<< HEAD
             this.panel2.Location = new System.Drawing.Point(767, 116);
             this.panel2.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.panel2.Location = new System.Drawing.Point(576, 94);
+>>>>>>> a73335369d48cb6a579924387c5125fc6227a7d6
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(265, 314);
             this.panel2.TabIndex = 2;
@@ -106,6 +121,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(131, 165);
@@ -120,6 +136,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(4, 165);
@@ -134,6 +151,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(12, 105);
             this.button1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
@@ -187,8 +205,12 @@
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
+<<<<<<< HEAD
             this.panel4.Location = new System.Drawing.Point(699, 469);
             this.panel4.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+=======
+            this.panel4.Location = new System.Drawing.Point(524, 379);
+>>>>>>> a73335369d48cb6a579924387c5125fc6227a7d6
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(335, 136);
             this.panel4.TabIndex = 3;
@@ -255,13 +277,49 @@
             this.label4.Text = "Total Productos:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
+<<<<<<< HEAD
+=======
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.lupa;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 21);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
+            // 
+            // btnRegreso
+            // 
+            this.btnRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRegreso.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegreso.BackgroundImage")));
+            this.btnRegreso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegreso.FlatAppearance.BorderSize = 0;
+            this.btnRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegreso.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRegreso.Location = new System.Drawing.Point(736, 16);
+            this.btnRegreso.Name = "btnRegreso";
+            this.btnRegreso.Size = new System.Drawing.Size(64, 38);
+            this.btnRegreso.TabIndex = 13;
+            this.btnRegreso.UseVisualStyleBackColor = false;
+            this.btnRegreso.Click += new System.EventHandler(this.btnRegreso_Click);
+            // 
+>>>>>>> a73335369d48cb6a579924387c5125fc6227a7d6
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+<<<<<<< HEAD
             this.ClientSize = new System.Drawing.Size(1067, 662);
+=======
+            this.ClientSize = new System.Drawing.Size(797, 538);
+>>>>>>> a73335369d48cb6a579924387c5125fc6227a7d6
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -300,5 +358,6 @@
         private System.Windows.Forms.TextBox txtCategorias;
         private System.Windows.Forms.TextBox txtBajoStock;
         private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Button btnRegreso;
     }
 }

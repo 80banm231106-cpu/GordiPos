@@ -149,6 +149,7 @@ namespace interfaz_de_caja_registradora
 
         }
 
+<<<<<<< HEAD
         private void button2_Click(object sender, EventArgs e)
         {
             // 1. Revisamos que el usuario sí haya seleccionado un renglón
@@ -173,6 +174,11 @@ namespace interfaz_de_caja_registradora
             {
                 MessageBox.Show("Por favor, selecciona toda la fila del producto que deseas editar (dando clic en la flechita de la izquierda de la tabla).", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+=======
+        private void btnRegreso_Click(object sender, EventArgs e)
+        {
+            this.Close();
+>>>>>>> a73335369d48cb6a579924387c5125fc6227a7d6
         }
     }
 }

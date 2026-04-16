@@ -613,6 +613,15 @@ namespace interfaz_de_caja_registradora
 
             lblTotal.Text = "Total: $" + total;
         }
+
+        private void button12_Click(object sender, EventArgs e)
+        {
+            // 1. Creamos la ventanita del cocinero (Asegúrate de poner el nombre correcto de tu Form de cocina)
+            Chef pantallaChef = new Chef();
+
+            // 2. ¡LA MAGIA AQUÍ! Usamos Show() en lugar de ShowDialog()
+            pantallaChef.Show();
+        }
     }
 
 }
