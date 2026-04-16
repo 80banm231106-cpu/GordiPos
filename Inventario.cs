@@ -52,18 +52,28 @@ namespace interfaz_de_caja_registradora
                 dataGridView1.DataSource = tablaVirtual;
 
                 // 2. CALCULAR ESTADÍSTICAS (Los cuadritos de abajo)
-                txtTotal.Text = tablaVirtual.Rows.Count.ToString();
-
+                // 2. CALCULAR ESTADÍSTICAS (Los cuadritos de abajo)
+                int sumaTotalPiezas = 0;
                 int productosBajos = 0;
+
                 foreach (DataRow fila in tablaVirtual.Rows)
                 {
-                    // Si el stock es menor a 10, lo contamos como "Bajo Stock"
+                    // En lugar de contar filas, sumamos la cantidad física de piezas
+                    sumaTotalPiezas += Convert.ToInt32(fila["Stock"]);
+
+                    // Nota: Si quieres que la alerta de Bajo Stock avise cuando queden 
+                    // menos de 5 piezas en lugar de 10, solo cambia el número 10 de aquí abajo
                     if (Convert.ToInt32(fila["Stock"]) < 10)
                     {
                         productosBajos++;
                     }
                 }
+
+                txtTotal.Text = sumaTotalPiezas.ToString();
                 txtBajoStock.Text = productosBajos.ToString();
+
+                // Categorías se queda en 0 por ahora porque no tenemos esa columna en la BD
+                txtCategorias.Text = "0";
 
                 // (Opcional) Si en tu base de datos tienes una columna 'categoria', podrías contarla aquí.
                 // Si no la tienes aún, lo dejamos en 0.
@@ -137,6 +147,32 @@ namespace interfaz_de_caja_registradora
         private void dataGridView1_CellContentClick(object sender, DataGridViewCellEventArgs e)
         {
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            // 1. Revisamos que el usuario sí haya seleccionado un renglón
+            if (dataGridView1.SelectedRows.Count > 0)
+            {
+                // 2. Extraemos los datos del renglón que seleccionó
+                int id = Convert.ToInt32(dataGridView1.CurrentRow.Cells["ID"].Value);
+                string nombreActual = dataGridView1.CurrentRow.Cells["Nombre"].Value.ToString();
+                int stockActual = Convert.ToInt32(dataGridView1.CurrentRow.Cells["Stock"].Value);
+
+                // 3. Abrimos la ventanita, pero usando el NUEVO constructor que le pasa los datos
+                FormAñadirProducto ventanaEditar = new FormAñadirProducto(id, nombreActual, stockActual);
+                ventanaEditar.ShowDialog();
+
+                // 4. Si el usuario le dio a "Actualizar" y todo salió bien, refrescamos la tabla
+                if (ventanaEditar.productoGuardado == true)
+                {
+                    ActualizarPantalla();
+                }
+            }
+            else
+            {
+                MessageBox.Show("Por favor, selecciona toda la fila del producto que deseas editar (dando clic en la flechita de la izquierda de la tabla).", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
+            }
         }
     }
 }

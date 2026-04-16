@@ -9,9 +9,24 @@ namespace interfaz_de_caja_registradora
         // 1. Nuestra bandera para avisarle al inventario que sí se guardó algo
         public bool productoGuardado = false;
 
+        public int idProductoSeleccionado = 0;
+
         public FormAñadirProducto()
         {
             InitializeComponent();
+        }
+
+        public FormAñadirProducto (int id, string nombreActual, int stockActual)
+        {
+            InitializeComponent();
+
+            idProductoSeleccionado = id;
+            txtNombre.Text = nombreActual;
+            txtStock.Text = stockActual.ToString();
+
+            // Le cambiamos el texto al botón para que se vea genial
+            btnGuardar.Text = "Actualizar";
+            this.Text = "Editar Producto";
         }
 
         private void btnGuardar_Click_1(object sender, EventArgs e)
@@ -37,17 +52,31 @@ namespace interfaz_de_caja_registradora
 
             try
             {
-                // Insertamos el nuevo producto en la tabla inventario
-                string sql = "INSERT INTO inventario (nombre, existencia) VALUES (@nom, @cant)";
-                MySqlCommand comando = new MySqlCommand(sql, bd.conectar);
-                comando.Parameters.AddWithValue("@nom", nombre);
-                comando.Parameters.AddWithValue("@cant", stock);
+                // --- NUEVO: El botón decide qué hacer basado en el ID ---
+                if (idProductoSeleccionado == 0)
+                {
+                    // MODO AÑADIR (Tu código original)
+                    string sql = "INSERT INTO inventario (nombre, existencia) VALUES (@nom, @cant)";
+                    MySqlCommand comando = new MySqlCommand(sql, bd.conectar);
+                    comando.Parameters.AddWithValue("@nom", nombre);
+                    comando.Parameters.AddWithValue("@cant", stock);
+                    comando.ExecuteNonQuery();
 
-                comando.ExecuteNonQuery();
+                    MessageBox.Show("¡Producto agregado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+                else
+                {
+                    // MODO EDITAR (El nuevo código UPDATE)
+                    string sql = "UPDATE inventario SET nombre = @nom, existencia = @cant WHERE id_inventario = @id";
+                    MySqlCommand comando = new MySqlCommand(sql, bd.conectar);
+                    comando.Parameters.AddWithValue("@nom", nombre);
+                    comando.Parameters.AddWithValue("@cant", stock);
+                    comando.Parameters.AddWithValue("@id", idProductoSeleccionado);
+                    comando.ExecuteNonQuery();
 
-                MessageBox.Show("¡Producto agregado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                    MessageBox.Show("¡Producto actualizado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
 
-                // Encendemos la bandera y cerramos la ventanita
                 productoGuardado = true;
                 this.Close();
             }
