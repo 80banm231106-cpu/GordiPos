@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
             this.Id_Inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
@@ -48,6 +49,7 @@
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnRegreso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
@@ -66,7 +68,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(557, 344);
+            this.dataGridView1.Size = new System.Drawing.Size(427, 344);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -95,6 +97,7 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.btnRegreso);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-26, 1);
             this.panel1.Name = "panel1";
@@ -122,7 +125,7 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(575, 94);
+            this.panel2.Location = new System.Drawing.Point(576, 94);
             this.panel2.Name = "panel2";
             this.panel2.Size = new System.Drawing.Size(200, 256);
             this.panel2.TabIndex = 2;
@@ -130,6 +133,7 @@
             // button3
             // 
             this.button3.BackColor = System.Drawing.Color.Red;
+            this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
             this.button3.Location = new System.Drawing.Point(98, 134);
@@ -143,6 +147,7 @@
             // button2
             // 
             this.button2.BackColor = System.Drawing.SystemColors.HotTrack;
+            this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
             this.button2.Location = new System.Drawing.Point(3, 134);
@@ -155,6 +160,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Lime;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(9, 85);
             this.button1.Name = "button1";
@@ -192,7 +198,7 @@
             this.panel4.Controls.Add(this.label6);
             this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(524, 381);
+            this.panel4.Location = new System.Drawing.Point(524, 379);
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(252, 111);
             this.panel4.TabIndex = 3;
@@ -265,13 +271,30 @@
             this.pictureBox1.TabIndex = 2;
             this.pictureBox1.TabStop = false;
             // 
+            // btnRegreso
+            // 
+            this.btnRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRegreso.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegreso.BackgroundImage")));
+            this.btnRegreso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegreso.FlatAppearance.BorderSize = 0;
+            this.btnRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegreso.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRegreso.Location = new System.Drawing.Point(736, 16);
+            this.btnRegreso.Name = "btnRegreso";
+            this.btnRegreso.Size = new System.Drawing.Size(64, 38);
+            this.btnRegreso.TabIndex = 13;
+            this.btnRegreso.UseVisualStyleBackColor = false;
+            this.btnRegreso.Click += new System.EventHandler(this.btnRegreso_Click);
+            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.ClientSize = new System.Drawing.Size(800, 538);
+            this.ClientSize = new System.Drawing.Size(797, 538);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.Controls.Add(this.panel1);
@@ -312,5 +335,6 @@
         private System.Windows.Forms.TextBox txtCategorias;
         private System.Windows.Forms.TextBox txtBajoStock;
         private System.Windows.Forms.TextBox txtTotal;
+        private System.Windows.Forms.Button btnRegreso;
     }
 }

@@ -138,5 +138,10 @@ namespace interfaz_de_caja_registradora
         {
 
         }
+
+        private void btnRegreso_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

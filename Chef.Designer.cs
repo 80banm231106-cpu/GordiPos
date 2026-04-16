@@ -83,6 +83,7 @@
             // btnEnPreparacion
             // 
             this.btnEnPreparacion.BackColor = System.Drawing.Color.Red;
+            this.btnEnPreparacion.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEnPreparacion.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEnPreparacion.ForeColor = System.Drawing.SystemColors.ButtonHighlight;
             this.btnEnPreparacion.Location = new System.Drawing.Point(87, 409);
@@ -96,6 +97,7 @@
             // btnListo
             // 
             this.btnListo.BackColor = System.Drawing.Color.Lime;
+            this.btnListo.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnListo.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnListo.ForeColor = System.Drawing.SystemColors.ControlText;
             this.btnListo.Location = new System.Drawing.Point(390, 409);
@@ -109,6 +111,7 @@
             // button1
             // 
             this.button1.BackColor = System.Drawing.Color.Yellow;
+            this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button1.Location = new System.Drawing.Point(668, 409);
             this.button1.Name = "button1";
@@ -124,7 +127,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label1);
             this.panel1.Location = new System.Drawing.Point(-3, 0);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(877, 65);
             this.panel1.TabIndex = 6;
