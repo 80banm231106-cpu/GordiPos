@@ -12,7 +12,7 @@ namespace interfaz_de_caja_registradora
     public class ConexionBD
     {
         // Cambia los datos por los que configuraste en Workbench
-        private string cadena = "Server=localhost; Database=AlmacenProductos; Uid=root; Pwd=Cisco123.;";
+        private string cadena = "Server=localhost; Database=almacenproductos; Uid=root; Pwd=Cisco123.;";
         public MySqlConnection conectar = new MySqlConnection();
 
         public void abrir()

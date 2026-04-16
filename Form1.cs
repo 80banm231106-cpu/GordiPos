@@ -614,7 +614,7 @@ namespace interfaz_de_caja_registradora
             lblTotal.Text = "Total: $" + total;
         }
     }
-    
+
 }
 
 
