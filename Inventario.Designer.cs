@@ -30,15 +30,14 @@
         {
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Inventario));
             this.dataGridView1 = new System.Windows.Forms.DataGridView();
-            this.Id_Inventario = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Nombre = new System.Windows.Forms.DataGridViewTextBoxColumn();
-            this.Existencia = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegreso = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.button3 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.button1 = new System.Windows.Forms.Button();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
@@ -48,50 +47,23 @@
             this.label6 = new System.Windows.Forms.Label();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnRegreso = new System.Windows.Forms.Button();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
-            this.panel4.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            this.panel4.SuspendLayout();
             this.SuspendLayout();
             // 
             // dataGridView1
             // 
             this.dataGridView1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.dataGridView1.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.dataGridView1.Columns.AddRange(new System.Windows.Forms.DataGridViewColumn[] {
-            this.Id_Inventario,
-            this.Nombre,
-            this.Existencia});
             this.dataGridView1.Location = new System.Drawing.Point(12, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
             this.dataGridView1.Size = new System.Drawing.Size(427, 344);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
-            // 
-            // Id_Inventario
-            // 
-            this.Id_Inventario.HeaderText = "ID Inventario";
-            this.Id_Inventario.MinimumWidth = 6;
-            this.Id_Inventario.Name = "Id_Inventario";
-            this.Id_Inventario.Width = 125;
-            // 
-            // Nombre
-            // 
-            this.Nombre.HeaderText = "Nombre";
-            this.Nombre.MinimumWidth = 6;
-            this.Nombre.Name = "Nombre";
-            this.Nombre.Width = 125;
-            // 
-            // Existencia
-            // 
-            this.Existencia.HeaderText = "Existencia";
-            this.Existencia.MinimumWidth = 6;
-            this.Existencia.Name = "Existencia";
-            this.Existencia.Width = 125;
             // 
             // panel1
             // 
@@ -103,6 +75,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(880, 79);
             this.panel1.TabIndex = 1;
+            // 
+            // btnRegreso
+            // 
+            this.btnRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRegreso.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegreso.BackgroundImage")));
+            this.btnRegreso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegreso.FlatAppearance.BorderSize = 0;
+            this.btnRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegreso.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRegreso.Location = new System.Drawing.Point(736, 16);
+            this.btnRegreso.Name = "btnRegreso";
+            this.btnRegreso.Size = new System.Drawing.Size(64, 38);
+            this.btnRegreso.TabIndex = 13;
+            this.btnRegreso.UseVisualStyleBackColor = false;
+            this.btnRegreso.Click += new System.EventHandler(this.btnRegreso_Click);
             // 
             // label1
             // 
@@ -156,6 +145,7 @@
             this.button2.TabIndex = 4;
             this.button2.Text = "Editar producto";
             this.button2.UseVisualStyleBackColor = false;
+            this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // button1
             // 
@@ -169,6 +159,18 @@
             this.button1.Text = "Añadir producto";
             this.button1.UseVisualStyleBackColor = false;
             this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
+            this.pictureBox1.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.lupa;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
+            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
+            this.pictureBox1.Location = new System.Drawing.Point(3, 46);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(33, 21);
+            this.pictureBox1.TabIndex = 2;
+            this.pictureBox1.TabStop = false;
             // 
             // txtBuscar
             // 
@@ -259,35 +261,6 @@
             this.label4.Text = "Total Productos:";
             this.label4.Click += new System.EventHandler(this.label4_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.BackColor = System.Drawing.Color.Transparent;
-            this.pictureBox1.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.lupa;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.BorderStyle = System.Windows.Forms.BorderStyle.FixedSingle;
-            this.pictureBox1.Location = new System.Drawing.Point(3, 46);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(33, 21);
-            this.pictureBox1.TabIndex = 2;
-            this.pictureBox1.TabStop = false;
-            // 
-            // btnRegreso
-            // 
-            this.btnRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRegreso.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegreso.BackgroundImage")));
-            this.btnRegreso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRegreso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegreso.FlatAppearance.BorderSize = 0;
-            this.btnRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegreso.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRegreso.Location = new System.Drawing.Point(736, 16);
-            this.btnRegreso.Name = "btnRegreso";
-            this.btnRegreso.Size = new System.Drawing.Size(64, 38);
-            this.btnRegreso.TabIndex = 13;
-            this.btnRegreso.UseVisualStyleBackColor = false;
-            this.btnRegreso.Click += new System.EventHandler(this.btnRegreso_Click);
-            // 
             // Inventario
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -306,9 +279,9 @@
             this.panel1.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -316,9 +289,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dataGridView1;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Id_Inventario;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Nombre;
-        private System.Windows.Forms.DataGridViewTextBoxColumn Existencia;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel panel2;

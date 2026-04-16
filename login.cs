@@ -141,17 +141,7 @@ namespace interfaz_de_caja_registradora
 
         private void login_Load(object sender, EventArgs e)
         {
-            System.Drawing.Drawing2D.GraphicsPath gp = new System.Drawing.Drawing2D.GraphicsPath();
-            gp.AddEllipse(0, 0, cabeza.Width - 3, cabeza.Height - 3);
-            Region rg = new Region(gp);
-            cabeza.Region = rg;
-
            
-
-            System.Drawing.Drawing2D.GraphicsPath gp2 = new System.Drawing.Drawing2D.GraphicsPath();
-            gp2.AddEllipse(0, 0, cuerpo.Width - 3, cuerpo.Height - 3);
-            Region rg2 = new Region(gp2);
-            cuerpo.Region = rg2;
         }
         
 
@@ -166,6 +156,36 @@ namespace interfaz_de_caja_registradora
             gp2.AddEllipse(0, 0, cuerpo.Width - 3, cuerpo.Height - 3);
             Region rg2 = new Region(gp2);
             cuerpo.Region = rg2;
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void linkLabel1_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // Armamos el texto combinando ambos. 
+            // El símbolo \n\n sirve para dar un doble salto de línea (como presionar Enter dos veces).
+            string textoCompleto = "NUESTRA MISIÓN:\n" +
+                           "Crear un sistema de ventas intuitivo que automatice el registro de productos " +
+                           "y el control de inventario, optimizando la organización del negocio a través " +
+                           "de una aplicación tan fácil de usar que no requiera de capacitaciones extensas.\n\n" +
+                           "NUESTRA VISIÓN:\n" +
+                           "Ser el sistema de gestión de ventas e inventario más útil, confiable y " +
+                           "accesible para los pequeños negocios de comida rápida.";
+
+            // Mostramos la ventanita
+            MessageBox.Show(textoCompleto, "Filosofía de Nuestro Proyecto", MessageBoxButtons.OK, MessageBoxIcon.Information);
+        }
+
+        private void linkLabel2_LinkClicked(object sender, LinkLabelLinkClickedEventArgs e)
+        {
+            // 1. Mandamos llamar a la ventanita que acabas de crear con la foto
+            Creadores ventanaFoto = new Creadores();
+
+            // 2. La mostramos en la pantalla como un cuadro emergente
+            ventanaFoto.ShowDialog();
         }
     }
 }

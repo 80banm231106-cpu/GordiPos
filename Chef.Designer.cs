@@ -38,6 +38,9 @@
             this.button1 = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
             this.label1 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.label2 = new System.Windows.Forms.Label();
+            this.label4 = new System.Windows.Forms.Label();
             this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -47,9 +50,9 @@
             this.listBoxEnEspera.FormattingEnabled = true;
             this.listBoxEnEspera.HorizontalScrollbar = true;
             this.listBoxEnEspera.ItemHeight = 16;
-            this.listBoxEnEspera.Location = new System.Drawing.Point(8, 83);
+            this.listBoxEnEspera.Location = new System.Drawing.Point(8, 115);
             this.listBoxEnEspera.Name = "listBoxEnEspera";
-            this.listBoxEnEspera.Size = new System.Drawing.Size(281, 292);
+            this.listBoxEnEspera.Size = new System.Drawing.Size(281, 260);
             this.listBoxEnEspera.TabIndex = 0;
             // 
             // listBoxEnPreparacion
@@ -58,9 +61,9 @@
             this.listBoxEnPreparacion.FormattingEnabled = true;
             this.listBoxEnPreparacion.HorizontalScrollbar = true;
             this.listBoxEnPreparacion.ItemHeight = 16;
-            this.listBoxEnPreparacion.Location = new System.Drawing.Point(292, 83);
+            this.listBoxEnPreparacion.Location = new System.Drawing.Point(292, 115);
             this.listBoxEnPreparacion.Name = "listBoxEnPreparacion";
-            this.listBoxEnPreparacion.Size = new System.Drawing.Size(281, 292);
+            this.listBoxEnPreparacion.Size = new System.Drawing.Size(281, 260);
             this.listBoxEnPreparacion.TabIndex = 1;
             // 
             // listBoxListo
@@ -69,9 +72,9 @@
             this.listBoxListo.FormattingEnabled = true;
             this.listBoxListo.HorizontalScrollbar = true;
             this.listBoxListo.ItemHeight = 16;
-            this.listBoxListo.Location = new System.Drawing.Point(579, 82);
+            this.listBoxListo.Location = new System.Drawing.Point(579, 114);
             this.listBoxListo.Name = "listBoxListo";
-            this.listBoxListo.Size = new System.Drawing.Size(281, 292);
+            this.listBoxListo.Size = new System.Drawing.Size(281, 260);
             this.listBoxListo.TabIndex = 2;
             // 
             // timer1
@@ -143,11 +146,47 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Cocina GordiFeliz";
             // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.ForeColor = System.Drawing.Color.Black;
+            this.label3.Location = new System.Drawing.Point(12, 73);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(134, 29);
+            this.label3.TabIndex = 7;
+            this.label3.Text = "En Espera";
+            // 
+            // label2
+            // 
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.ForeColor = System.Drawing.Color.Black;
+            this.label2.Location = new System.Drawing.Point(297, 73);
+            this.label2.Name = "label2";
+            this.label2.Size = new System.Drawing.Size(193, 29);
+            this.label2.TabIndex = 8;
+            this.label2.Text = "En Preparacion";
+            // 
+            // label4
+            // 
+            this.label4.AutoSize = true;
+            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 18F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label4.ForeColor = System.Drawing.Color.Black;
+            this.label4.Location = new System.Drawing.Point(584, 73);
+            this.label4.Name = "label4";
+            this.label4.Size = new System.Drawing.Size(69, 29);
+            this.label4.TabIndex = 9;
+            this.label4.Text = "Listo";
+            // 
             // Chef
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(864, 494);
+            this.Controls.Add(this.label4);
+            this.Controls.Add(this.label2);
+            this.Controls.Add(this.label3);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.btnListo);
@@ -160,6 +199,7 @@
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -174,5 +214,8 @@
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Label label1;
+        private System.Windows.Forms.Label label3;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.Label label4;
     }
 }

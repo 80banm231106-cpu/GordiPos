@@ -3,8 +3,32 @@
   "WorkspaceRootPath": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\jaque\\source\\repos\\gordiposs\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\chef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:chef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\jaque\\source\\repos\\gordiposs\\creadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:creadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\jaque\\source\\repos\\gordiposs\\creadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:creadores.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\cortedecaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -15,40 +39,12 @@
       "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:cortedecaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\jaque\\source\\repos\\gordiposs\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\chef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:chef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\jaque\\source\\repos\\gordiposs\\a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\jaque\\source\\repos\\gordiposs\\a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\jaque\\source\\repos\\gordiposs\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:conexionbd.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
       "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\aperturacaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
@@ -82,87 +78,26 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]*",
+              "DocumentIndex": 4,
+              "Title": "Creadores.cs",
+              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Creadores.cs",
+              "RelativeDocumentMoniker": "Creadores.cs",
+              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Creadores.cs",
+              "RelativeToolTip": "Creadores.cs",
+              "ViewState": "AgIAAAcAAAAAAAAAAAAAwBIAAAAAAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T22:16:43.327Z",
-              "EditorCaption": " [Dise\u00F1o]"
+              "WhenOpened": "2026-04-16T23:07:04.945Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 2,
-              "Title": "CorteDeCaja.cs",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\CorteDeCaja.cs",
-              "RelativeDocumentMoniker": "CorteDeCaja.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\CorteDeCaja.cs*",
-              "RelativeToolTip": "CorteDeCaja.cs*",
-              "ViewState": "AgIAAHkAAAAAAAAAAAAkwIoAAAABAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T22:16:43.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "CorteDeCaja.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\CorteDeCaja.cs",
-              "RelativeDocumentMoniker": "CorteDeCaja.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\CorteDeCaja.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "CorteDeCaja.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T22:16:43.327Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 4,
-              "Title": "Chef.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Chef.cs",
-              "RelativeDocumentMoniker": "Chef.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Chef.cs [Dise\u00F1o]*",
-              "RelativeToolTip": "Chef.cs [Dise\u00F1o]*",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T22:16:46.295Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
-              "Title": "Inventario.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Inventario.cs",
-              "RelativeDocumentMoniker": "Inventario.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Inventario.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Inventario.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T22:16:46.28Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 5,
-              "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs*",
-              "RelativeToolTip": "Form1.cs*",
-              "ViewState": "AgIAAFsCAABAZmZmZmYawG8CAAAJAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T22:16:46.28Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 6,
               "Title": "Inventario.cs",
               "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Inventario.cs",
               "RelativeDocumentMoniker": "Inventario.cs",
               "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Inventario.cs",
               "RelativeToolTip": "Inventario.cs",
-              "ViewState": "AgIAAIIAAAAAAAAAAAAYwI8AAAAZAAAAAAAAAA==",
+              "ViewState": "AgIAABYAAADg//////81wFUAAAANAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
               "WhenOpened": "2026-04-16T13:26:36.774Z",
               "EditorCaption": ""
@@ -170,6 +105,18 @@
             {
               "$type": "Document",
               "DocumentIndex": 7,
+              "Title": "CorteDeCaja.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\CorteDeCaja.cs",
+              "RelativeDocumentMoniker": "CorteDeCaja.cs",
+              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\CorteDeCaja.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CorteDeCaja.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T22:16:43.327Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
               "Title": "login.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\login.cs",
               "RelativeDocumentMoniker": "login.cs",
@@ -181,7 +128,31 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 9,
+              "DocumentIndex": 0,
+              "Title": "Chef.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Chef.cs",
+              "RelativeDocumentMoniker": "Chef.cs",
+              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Chef.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Chef.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T22:16:46.295Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Creadores.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Creadores.cs",
+              "RelativeDocumentMoniker": "Creadores.cs",
+              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Creadores.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Creadores.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-16T23:04:41.755Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
               "Title": "A\u00F1adirProducto.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\A\u00F1adirProducto.cs",
               "RelativeDocumentMoniker": "A\u00F1adirProducto.cs",
@@ -193,16 +164,40 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 8,
-              "Title": "A\u00F1adirProducto.cs",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\A\u00F1adirProducto.cs",
-              "RelativeDocumentMoniker": "A\u00F1adirProducto.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\A\u00F1adirProducto.cs",
-              "RelativeToolTip": "A\u00F1adirProducto.cs",
-              "ViewState": "AgIAADMAAAAAAAAAAADgv0IAAAAZAAAAAAAAAA==",
+              "DocumentIndex": 5,
+              "Title": "Inventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Inventario.cs",
+              "RelativeDocumentMoniker": "Inventario.cs",
+              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Inventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Inventario.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T17:44:47.931Z",
+              "WhenOpened": "2026-04-15T22:16:46.28Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
+              "Title": "CorteDeCaja.cs",
+              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\CorteDeCaja.cs",
+              "RelativeDocumentMoniker": "CorteDeCaja.cs",
+              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\CorteDeCaja.cs",
+              "RelativeToolTip": "CorteDeCaja.cs",
+              "ViewState": "AgIAAHkAAAAAAAAAAAAkwIoAAAABAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T22:16:43.327Z",
               "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-15T22:16:43.327Z",
+              "EditorCaption": " [Dise\u00F1o]"
             },
             {
               "$type": "Document",
@@ -214,25 +209,11 @@
               "RelativeToolTip": "ConexionBD.cs",
               "ViewState": "AgIAAAEAAAAgMzMzMzMLwBIAAAAJAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-16T16:46:29.634Z",
-              "EditorCaption": ""
+              "WhenOpened": "2026-04-16T16:46:29.634Z"
             },
             {
               "$type": "Document",
               "DocumentIndex": 11,
-              "Title": "login.cs",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\login.cs",
-              "RelativeDocumentMoniker": "login.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\login.cs",
-              "RelativeToolTip": "login.cs",
-              "ViewState": "AgIAABcAAAAAMjMzMzPzvykAAAAfAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-15T22:16:43.327Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 12,
               "Title": "AperturaCaja.cs [Dise\u00F1o]",
               "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\AperturaCaja.cs",
               "RelativeDocumentMoniker": "AperturaCaja.cs",
@@ -243,7 +224,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 13,
+              "DocumentIndex": 12,
               "Title": "DatosCocina.cs",
               "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\DatosCocina.cs",
               "RelativeDocumentMoniker": "DatosCocina.cs",

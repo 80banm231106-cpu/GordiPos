@@ -261,7 +261,7 @@
             this.btnRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegreso.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRegreso.Location = new System.Drawing.Point(759, 14);
+            this.btnRegreso.Location = new System.Drawing.Point(838, 14);
             this.btnRegreso.Name = "btnRegreso";
             this.btnRegreso.Size = new System.Drawing.Size(64, 38);
             this.btnRegreso.TabIndex = 12;

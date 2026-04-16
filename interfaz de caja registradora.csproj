@@ -122,6 +122,12 @@
     <Compile Include="CorteDeCaja.Designer.cs">
       <DependentUpon>CorteDeCaja.cs</DependentUpon>
     </Compile>
+    <Compile Include="Creadores.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Creadores.Designer.cs">
+      <DependentUpon>Creadores.cs</DependentUpon>
+    </Compile>
     <Compile Include="DatosCocina.cs" />
     <Compile Include="Form1.cs">
       <SubType>Form</SubType>
@@ -154,6 +160,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="CorteDeCaja.resx">
       <DependentUpon>CorteDeCaja.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Creadores.resx">
+      <DependentUpon>Creadores.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Form1.resx">
       <DependentUpon>Form1.cs</DependentUpon>
