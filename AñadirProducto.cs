@@ -9,10 +9,11 @@ namespace interfaz_de_caja_registradora
         // 1. Nuestra bandera para avisarle al inventario que sí se guardó algo
         public bool productoGuardado = false;
 
-        // --- RECUPERADO: Variable para recordar qué ID estamos editando ---
+
         public int idProductoSeleccionado = 0;
 
         // Constructor 1: El normal para Añadir (ID = 0)
+
         public FormAñadirProducto()
         {
             InitializeComponent();
@@ -21,6 +22,7 @@ namespace interfaz_de_caja_registradora
         // --- RECUPERADO: Constructor 2 para Editar ---
         // Si usamos este, la ventana se llena con los datos actuales
         public FormAñadirProducto(int id, string nombreActual, int stockActual)
+
         {
             InitializeComponent();
 
@@ -29,6 +31,9 @@ namespace interfaz_de_caja_registradora
             txtStock.Text = stockActual.ToString();
 
             // Opcional: Le cambiamos el texto al botón para que se vea genial
+            // Le cambiamos el texto al botón para que se vea genial
+            btnGuardar.Text = "Actualizar";
+
             this.Text = "Editar Producto";
         }
 
@@ -55,7 +60,7 @@ namespace interfaz_de_caja_registradora
 
             try
             {
-                // --- RECUPERADO: El botón decide qué hacer basado en el ID ---
+
                 if (idProductoSeleccionado == 0)
                 {
                     // MODO AÑADIR (Tu código original)
@@ -69,7 +74,7 @@ namespace interfaz_de_caja_registradora
                 }
                 else
                 {
-                    // MODO EDITAR (El código UPDATE)
+
                     string sql = "UPDATE inventario SET nombre = @nom, existencia = @cant WHERE id_inventario = @id";
                     MySqlCommand comando = new MySqlCommand(sql, bd.conectar);
                     comando.Parameters.AddWithValue("@nom", nombre);
@@ -80,7 +85,6 @@ namespace interfaz_de_caja_registradora
                     MessageBox.Show("¡Producto actualizado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
                 }
 
-                // Encendemos la bandera y cerramos la ventanita
                 productoGuardado = true;
                 this.Close();
             }

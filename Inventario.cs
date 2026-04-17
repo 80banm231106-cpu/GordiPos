@@ -52,24 +52,28 @@ namespace interfaz_de_caja_registradora
                 dataGridView1.DataSource = tablaVirtual;
 
                 // 2. CALCULAR ESTADÍSTICAS (Los cuadritos de abajo)
+                // 2. CALCULAR ESTADÍSTICAS (Los cuadritos de abajo)
                 int sumaTotalPiezas = 0;
                 int productosBajos = 0;
 
                 foreach (DataRow fila in tablaVirtual.Rows)
                 {
-                    // Sumamos la cantidad física de piezas en lugar de contar renglones
+                    // En lugar de contar filas, sumamos la cantidad física de piezas
                     sumaTotalPiezas += Convert.ToInt32(fila["Stock"]);
 
-                    // Si el stock es menor a 10, lo contamos como "Bajo Stock"
+                    // Nota: Si quieres que la alerta de Bajo Stock avise cuando queden 
+                    // menos de 5 piezas en lugar de 10, solo cambia el número 10 de aquí abajo
                     if (Convert.ToInt32(fila["Stock"]) < 10)
                     {
                         productosBajos++;
                     }
                 }
 
-                // Le pasamos los resultados a tus cajitas de texto
                 txtTotal.Text = sumaTotalPiezas.ToString();
                 txtBajoStock.Text = productosBajos.ToString();
+
+                // Categorías se queda en 0 por ahora porque no tenemos esa columna en la BD
+                txtCategorias.Text = "0";
 
                 // (Opcional) Si en tu base de datos tienes una columna 'categoria', podrías contarla aquí.
                 // Si no la tienes aún, lo dejamos en 0.
@@ -146,9 +150,12 @@ namespace interfaz_de_caja_registradora
 
         }
 
+        
+
         private void btnRegreso_Click(object sender, EventArgs e)
         {
             this.Close();
+
         }
 
         private void button2_Click(object sender, EventArgs e)
