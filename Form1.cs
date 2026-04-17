@@ -607,7 +607,7 @@ namespace interfaz_de_caja_registradora
         {
             double precio = 90;
 
-            ListaVenta.Items.Add("Combo Dulce 2x - $90");
+            ListaVenta.Items.Add("Combo dulce - $90");
 
             total += precio;
 
@@ -615,6 +615,15 @@ namespace interfaz_de_caja_registradora
         }
 
         private void button12_Click(object sender, EventArgs e)
+        {
+            // 1. Creamos la ventanita del cocinero (Asegúrate de poner el nombre correcto de tu Form de cocina)
+            Chef pantallaChef = new Chef();
+
+            // 2. ¡LA MAGIA AQUÍ! Usamos Show() en lugar de ShowDialog()
+            pantallaChef.Show();
+        }
+
+        private void button13_Click(object sender, EventArgs e)
         {
             // 1. Creamos la ventanita del cocinero (Asegúrate de poner el nombre correcto de tu Form de cocina)
             Chef pantallaChef = new Chef();

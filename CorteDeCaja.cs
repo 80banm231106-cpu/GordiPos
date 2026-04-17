@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MySql.Data.MySqlClient;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -19,100 +20,138 @@ namespace interfaz_de_caja_registradora
             InitializeComponent();
         }
         // 1. Creamos variables a nivel de clase para usarlas en todo el formulario
-        decimal fondoInicial = 500.00m; // Simulamos que abriste la caja con $500
-        decimal ventasDelDia = 1250.50m; // Simulamos que vendiste $1250.50 en hamburguesas
+        decimal fondoInicial = 0m;
+        decimal ventasDelDia = 0m;
         decimal totalEsperado = 0m;
 
         private void CorteDeCaja_Load(object sender, EventArgs e)
         {
-            
-           // 2. Llenamos los Labels con nuestros datos "fake"
-             lblCajero.Text = "Cajero: admin"; // Tu usuario provisional
 
-            // El ToString("C") formatea el número automáticamente con el signo de $ y decimales
-            txtFondoinicial.Text = fondoInicial.ToString("C");
-            txtVentastotales.Text = ventasDelDia.ToString("C");
+            ObtenerVentasReales();
+        }
 
-            // 3. Calculamos cuánto dinero DEBERÍA haber en la caja
-            totalEsperado = fondoInicial + ventasDelDia;
-            txtTotalesperado.Text = totalEsperado.ToString("C");
+        private void ObtenerVentasReales()
+        {
+            ConexionBD bd = new ConexionBD();
+            bd.abrir();
+
+            try
+            {
+                // 1. Obtenemos el fondo inicial (puedes traerlo de una tabla de configuracion o dejarlo fijo por ahora)
+                string sqlFondo = "SELECT monto_inicial FROM Apertura_caja WHERE DATE(fecha) = CURDATE() ORDER BY id_apertura DESC LIMIT 1";
+                MySqlCommand cmdFondo = new MySqlCommand(sqlFondo, bd.conectar);
+                object resFondo = cmdFondo.ExecuteScalar();
+
+                // Si existe una apertura hoy, la usamos; si no, le ponemos 0 o un valor por defecto
+                fondoInicial = (resFondo != DBNull.Value && resFondo != null) ? Convert.ToDecimal(resFondo) : 0m;
+
+                // 2. Sumamos todas las ventas registradas hoy en la base de datos
+                // Nota: Asegúrate que tu tabla de ventas tenga una columna 'total'
+                string sql = "SELECT SUM(total) FROM ventas WHERE DATE(fecha) = CURDATE()";
+                MySqlCommand comando = new MySqlCommand(sql, bd.conectar);
+
+                object resultado = comando.ExecuteScalar();
+
+                // Si hay ventas hoy, las guardamos; si no, se queda en 0
+                ventasDelDia = (resultado != DBNull.Value) ? Convert.ToDecimal(resultado) : 0m;
+
+                // 3. Llenamos los textos de la interfaz
+                lblCajero.Text = "Cajero: admin"; // Aquí podrías poner el nombre del que hizo login
+                txtFondoinicial.Text = fondoInicial.ToString("C");
+                txtVentastotales.Text = ventasDelDia.ToString("C");
+
+                // 4. Calculamos el total esperado
+                totalEsperado = fondoInicial + ventasDelDia;
+                txtTotalesperado.Text = totalEsperado.ToString("C");
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show("Error al calcular el corte: " + ex.Message);
+            }
+            finally
+            {
+                bd.cerrar();
+            }
         }
 
         private void txtEfectivoContado_TextChanged(object sender, EventArgs e)
         {
-            // Verificamos que la caja no esté vacía y que el usuario haya escrito un número válido
+            // El resto de tu lógica de diferencia se mantiene igual...
             if (decimal.TryParse(txtEfectivoContado.Text, out decimal efectivoReal))
             {
-                // Calculamos la diferencia
                 decimal diferencia = efectivoReal - totalEsperado;
-
-                // Mostramos el resultado
                 lblDiferencia.Text = "Diferencia: " + diferencia.ToString("C");
 
-                // Le damos color para que sea más visual
-                if (diferencia == 0)
-                {
-                    lblDiferencia.ForeColor = Color.Green; // ¡Corte perfecto!
-                }
-                else if (diferencia < 0)
-                {
-                    lblDiferencia.ForeColor = Color.Red; // ¡Falta dinero!
-                }
-                else
-                {
-                    lblDiferencia.ForeColor = Color.Blue; // Sobra dinero
-                }
-            }
-            else
-            {
-                // Si borran todo o escriben letras, limpiamos la diferencia
-                lblDiferencia.Text = "Diferencia: $0.00";
-                lblDiferencia.ForeColor = Color.Black;
+                if (diferencia == 0) lblDiferencia.ForeColor = Color.Green;
+                else if (diferencia < 0) lblDiferencia.ForeColor = Color.Red;
+                else lblDiferencia.ForeColor = Color.Blue;
             }
         }
 
         private void btnFinalizarCorte_Click(object sender, EventArgs e)
         {
-            // --- 1. PRIMERO HACEMOS LA VALIDACIÓN ---
-            // TryParse intenta convertir el texto a número. 
-            // El símbolo "!" al principio significa "Si NO se pudo convertir..."
+            // 1. VALIDACIÓN: Verificamos que haya un número en el efectivo contado
             if (!decimal.TryParse(txtEfectivoContado.Text, out decimal efectivoReal))
             {
-                // Mostramos el mensaje de error
-                MessageBox.Show("Por favor, ingrese una cantidad válida en el Efectivo Contado. No se permiten letras ni dejar el espacio vacío.",
-                                "Dato Inválido",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Warning);
-
-                // Ponemos el cursor parpadeando de vuelta en la cajita para que lo corrija
+                MessageBox.Show("Por favor, ingrese el total de dinero contado en caja.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
                 txtEfectivoContado.Focus();
-
-                // ¡SUPER IMPORTANTE! El 'return' funciona como un freno. 
-                // Detiene el código aquí mismo para que no avance a hacer el corte.
                 return;
             }
-            // ----------------------------------------
 
+            // 2. CONFIRMACIÓN: ¿Seguro que quiere cerrar?
+            DialogResult respuesta = MessageBox.Show("¿Deseas finalizar el turno y guardar el corte de caja?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
 
-            // --- 2. SI PASÓ LA VALIDACIÓN, CONTINUAMOS NORMALMENTE ---
-            // Le preguntamos al cajero si está completamente seguro
-            DialogResult respuesta = MessageBox.Show("¿Estás seguro de finalizar el corte de caja con estos datos?",
-                                                     "Confirmar Corte",
-                                                     MessageBoxButtons.YesNo,
-                                                     MessageBoxIcon.Question);
-
-            // Evaluamos su respuesta
             if (respuesta == DialogResult.Yes)
             {
-                // --- AQUÍ EN EL FUTURO IRÁ EL CÓDIGO PARA GUARDAR EN LA BASE DE DATOS ---
+                // 3. CÁLCULO DE DIFERENCIA (lo hacemos aquí antes de guardar)
+                decimal diferencia = efectivoReal - totalEsperado;
 
-                MessageBox.Show("¡Corte de caja guardado y finalizado exitosamente!",
-                                "Corte Exitoso",
-                                MessageBoxButtons.OK,
-                                MessageBoxIcon.Information);
+                // 4. GUARDAR EN LA BASE DE DATOS
+                ConexionBD bd = new ConexionBD();
+                bd.abrir();
 
-                // Cerramos la pantalla del corte para regresar al menú
-                this.Close();
+                try
+                {
+                    // Insertamos en la tabla cierre_caja usando los nombres de columnas de tu imagen
+                    string sql = @"INSERT INTO cierre_caja (fecha, total, monto_inicial, monto_real, diferencia) 
+                           VALUES (NOW(), @ventas, @inicial, @real, @dif)";
+
+                    MySqlCommand comando = new MySqlCommand(sql, bd.conectar);
+
+                    // Pasamos los valores de las variables que ya calculamos en el Load y el TextChanged
+                    comando.Parameters.AddWithValue("@ventas", ventasDelDia);
+                    comando.Parameters.AddWithValue("@inicial", fondoInicial);
+                    comando.Parameters.AddWithValue("@real", efectivoReal);
+                    comando.Parameters.AddWithValue("@dif", diferencia);
+
+                    int filasInsertadas = comando.ExecuteNonQuery();
+
+                    if (filasInsertadas > 0)
+                    {
+                        MessageBox.Show("¡Corte guardado exitosamente en la base de datos!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
+
+                        // --- 5. REGRESAR AL LOGIN Y CERRAR LA CAJA ---
+
+                        // Abrimos el login (ajusta el nombre si tu form se llama diferente, ej: LoginUsuario)
+                        login ventanaLogin = new login();
+                        ventanaLogin.Show();
+
+                        // Cerramos esta ventana de Corte
+                        this.Close();
+
+                        // Cerramos el Form1 (la caja registradora) para que nadie más la use
+                        Form formularioCaja = Application.OpenForms["Form1"];
+                        if (formularioCaja != null) formularioCaja.Close();
+                    }
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show("Error al guardar el corte: " + ex.Message, "Error de BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+                finally
+                {
+                    bd.cerrar();
+                }
             }
         }
 
