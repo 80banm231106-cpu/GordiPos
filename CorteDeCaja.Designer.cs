@@ -36,6 +36,7 @@
             this.label3 = new System.Windows.Forms.Label();
             this.btnFinalizarCorte = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnRegreso = new System.Windows.Forms.Button();
             this.label9 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -49,7 +50,6 @@
             this.label7 = new System.Windows.Forms.Label();
             this.label6 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.btnRegreso = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panel3.SuspendLayout();
@@ -129,6 +129,23 @@
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(881, 75);
             this.panel1.TabIndex = 10;
+            // 
+            // btnRegreso
+            // 
+            this.btnRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.btnRegreso.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegreso.BackgroundImage")));
+            this.btnRegreso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
+            this.btnRegreso.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnRegreso.FlatAppearance.BorderSize = 0;
+            this.btnRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.btnRegreso.ForeColor = System.Drawing.SystemColors.Control;
+            this.btnRegreso.Location = new System.Drawing.Point(804, 17);
+            this.btnRegreso.Name = "btnRegreso";
+            this.btnRegreso.Size = new System.Drawing.Size(64, 38);
+            this.btnRegreso.TabIndex = 14;
+            this.btnRegreso.UseVisualStyleBackColor = false;
+            this.btnRegreso.Click += new System.EventHandler(this.btnRegreso_Click);
             // 
             // label9
             // 
@@ -269,23 +286,6 @@
             this.panel4.Name = "panel4";
             this.panel4.Size = new System.Drawing.Size(475, 121);
             this.panel4.TabIndex = 13;
-            // 
-            // btnRegreso
-            // 
-            this.btnRegreso.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
-            this.btnRegreso.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("btnRegreso.BackgroundImage")));
-            this.btnRegreso.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Zoom;
-            this.btnRegreso.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnRegreso.FlatAppearance.BorderSize = 0;
-            this.btnRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnRegreso.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRegreso.Location = new System.Drawing.Point(804, 17);
-            this.btnRegreso.Name = "btnRegreso";
-            this.btnRegreso.Size = new System.Drawing.Size(64, 38);
-            this.btnRegreso.TabIndex = 14;
-            this.btnRegreso.UseVisualStyleBackColor = false;
-            this.btnRegreso.Click += new System.EventHandler(this.btnRegreso_Click);
             // 
             // CorteDeCaja
             // 

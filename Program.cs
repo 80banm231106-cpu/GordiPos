@@ -16,7 +16,7 @@ namespace interfaz_de_caja_registradora
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new login());
+            Application.Run(new Bienvenida());
         }
     }
 }

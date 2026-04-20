@@ -97,5 +97,10 @@ namespace interfaz_de_caja_registradora
                 MessageBox.Show("Por favor, selecciona un pedido de la columna 'Listo' para entregarlo.", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
         }
+
+        private void btnRegreso_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

@@ -45,7 +45,6 @@
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.btnComida = new System.Windows.Forms.Button();
             this.btnPostres = new System.Windows.Forms.Button();
-            this.btnPromociones = new System.Windows.Forms.Button();
             this.btnBenidas = new System.Windows.Forms.Button();
             this.lblTotal = new System.Windows.Forms.Label();
             this.panelComida = new System.Windows.Forms.Panel();
@@ -81,6 +80,8 @@
             this.button8 = new System.Windows.Forms.Button();
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.rbDolares = new System.Windows.Forms.RadioButton();
+            this.rbPesos = new System.Windows.Forms.RadioButton();
             this.lblCambio = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.menuOpciones = new System.Windows.Forms.ContextMenuStrip(this.components);
@@ -88,7 +89,8 @@
             this.irAInventarioToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.corteDeCajaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.button12 = new System.Windows.Forms.Button();
-            this.button13 = new System.Windows.Forms.Button();
+            this.button14 = new System.Windows.Forms.Button();
+            this.button15 = new System.Windows.Forms.Button();
             this.panel4.SuspendLayout();
             this.panelComida.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox8)).BeginInit();
@@ -118,10 +120,10 @@
             // 
             this.BtnNuggets.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnNuggets.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnNuggets.Location = new System.Drawing.Point(321, 12);
+            this.BtnNuggets.Location = new System.Drawing.Point(665, 23);
             this.BtnNuggets.Margin = new System.Windows.Forms.Padding(2);
             this.BtnNuggets.Name = "BtnNuggets";
-            this.BtnNuggets.Size = new System.Drawing.Size(138, 135);
+            this.BtnNuggets.Size = new System.Drawing.Size(225, 225);
             this.BtnNuggets.TabIndex = 18;
             this.BtnNuggets.Text = "\r\n\r\n\r\n\r\n\r\n\r\nNuggets 40$";
             this.BtnNuggets.UseVisualStyleBackColor = true;
@@ -131,12 +133,12 @@
             // 
             this.btnBebidas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBebidas.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnBebidas.Location = new System.Drawing.Point(11, 23);
+            this.btnBebidas.Location = new System.Drawing.Point(51, 33);
             this.btnBebidas.Margin = new System.Windows.Forms.Padding(2);
             this.btnBebidas.Name = "btnBebidas";
-            this.btnBebidas.Size = new System.Drawing.Size(138, 135);
+            this.btnBebidas.Size = new System.Drawing.Size(225, 225);
             this.btnBebidas.TabIndex = 17;
-            this.btnBebidas.Text = "\r\n\r\n\r\n\r\n\r\n\r\nCoca Cola 30$\r\n   ";
+            this.btnBebidas.Text = "\r\n\r\n\r\n\r\n\r\n\r\nCoca Cola 30$   ";
             this.btnBebidas.UseVisualStyleBackColor = true;
             this.btnBebidas.Click += new System.EventHandler(this.btnBebidas_Click);
             // 
@@ -144,10 +146,10 @@
             // 
             this.btnPapas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPapas.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPapas.Location = new System.Drawing.Point(166, 156);
+            this.btnPapas.Location = new System.Drawing.Point(354, 290);
             this.btnPapas.Margin = new System.Windows.Forms.Padding(2);
             this.btnPapas.Name = "btnPapas";
-            this.btnPapas.Size = new System.Drawing.Size(138, 135);
+            this.btnPapas.Size = new System.Drawing.Size(255, 250);
             this.btnPapas.TabIndex = 16;
             this.btnPapas.Text = "\r\n\r\n\r\n\r\n\r\n\r\nPapas 40$";
             this.btnPapas.UseVisualStyleBackColor = true;
@@ -157,10 +159,10 @@
             // 
             this.btnHamburguesa.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnHamburguesa.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnHamburguesa.Location = new System.Drawing.Point(166, 12);
+            this.btnHamburguesa.Location = new System.Drawing.Point(374, 23);
             this.btnHamburguesa.Margin = new System.Windows.Forms.Padding(2);
             this.btnHamburguesa.Name = "btnHamburguesa";
-            this.btnHamburguesa.Size = new System.Drawing.Size(138, 135);
+            this.btnHamburguesa.Size = new System.Drawing.Size(225, 225);
             this.btnHamburguesa.TabIndex = 15;
             this.btnHamburguesa.Text = "\r\n\r\n\r\n\r\n\r\n\r\nHamburguesa 80$";
             this.btnHamburguesa.UseVisualStyleBackColor = true;
@@ -170,10 +172,10 @@
             // 
             this.BtnBanderilla.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnBanderilla.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnBanderilla.Location = new System.Drawing.Point(12, 12);
+            this.BtnBanderilla.Location = new System.Drawing.Point(38, 23);
             this.BtnBanderilla.Margin = new System.Windows.Forms.Padding(2);
             this.BtnBanderilla.Name = "BtnBanderilla";
-            this.BtnBanderilla.Size = new System.Drawing.Size(138, 135);
+            this.BtnBanderilla.Size = new System.Drawing.Size(225, 225);
             this.BtnBanderilla.TabIndex = 13;
             this.BtnBanderilla.Text = "\r\n\r\n\r\n\r\n\r\n\r\nBanderilla 35$";
             this.BtnBanderilla.UseVisualStyleBackColor = true;
@@ -185,10 +187,10 @@
             this.btnEliminar.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnEliminar.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnEliminar.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnEliminar.Location = new System.Drawing.Point(10, 284);
+            this.btnEliminar.Location = new System.Drawing.Point(10, 535);
             this.btnEliminar.Margin = new System.Windows.Forms.Padding(2);
             this.btnEliminar.Name = "btnEliminar";
-            this.btnEliminar.Size = new System.Drawing.Size(82, 36);
+            this.btnEliminar.Size = new System.Drawing.Size(110, 60);
             this.btnEliminar.TabIndex = 0;
             this.btnEliminar.Text = "Eliminar";
             this.btnEliminar.UseVisualStyleBackColor = false;
@@ -197,7 +199,7 @@
             // txtPago
             // 
             this.txtPago.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtPago.Location = new System.Drawing.Point(6, 247);
+            this.txtPago.Location = new System.Drawing.Point(6, 495);
             this.txtPago.Margin = new System.Windows.Forms.Padding(2);
             this.txtPago.Name = "txtPago";
             this.txtPago.Size = new System.Drawing.Size(108, 20);
@@ -209,10 +211,10 @@
             this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(126, 284);
+            this.button1.Location = new System.Drawing.Point(198, 535);
             this.button1.Margin = new System.Windows.Forms.Padding(2);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(80, 36);
+            this.button1.Size = new System.Drawing.Size(110, 60);
             this.button1.TabIndex = 2;
             this.button1.Text = "Cobrar";
             this.button1.UseVisualStyleBackColor = false;
@@ -225,7 +227,7 @@
             this.ListaVenta.Location = new System.Drawing.Point(6, 6);
             this.ListaVenta.Margin = new System.Windows.Forms.Padding(2);
             this.ListaVenta.Name = "ListaVenta";
-            this.ListaVenta.Size = new System.Drawing.Size(225, 109);
+            this.ListaVenta.Size = new System.Drawing.Size(321, 379);
             this.ListaVenta.TabIndex = 6;
             this.ListaVenta.SelectedIndexChanged += new System.EventHandler(this.ListaVenta_SelectedIndexChanged);
             // 
@@ -243,14 +245,14 @@
             // 
             this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.button13);
+            this.panel4.Controls.Add(this.button15);
             this.panel4.Controls.Add(this.btnRegreso);
             this.panel4.Controls.Add(this.textBox1);
             this.panel4.Controls.Add(this.panel3);
             this.panel4.Location = new System.Drawing.Point(3, -1);
             this.panel4.Margin = new System.Windows.Forms.Padding(2);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(929, 74);
+            this.panel4.Size = new System.Drawing.Size(1359, 74);
             this.panel4.TabIndex = 19;
             // 
             // btnRegreso
@@ -263,7 +265,7 @@
             this.btnRegreso.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegreso.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnRegreso.Location = new System.Drawing.Point(840, 13);
+            this.btnRegreso.Location = new System.Drawing.Point(1268, 13);
             this.btnRegreso.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegreso.Name = "btnRegreso";
             this.btnRegreso.Size = new System.Drawing.Size(64, 38);
@@ -276,7 +278,7 @@
             this.textBox1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.textBox1.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.textBox1.ForeColor = System.Drawing.Color.White;
-            this.textBox1.Location = new System.Drawing.Point(347, 14);
+            this.textBox1.Location = new System.Drawing.Point(609, 14);
             this.textBox1.Margin = new System.Windows.Forms.Padding(2);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(323, 38);
@@ -289,10 +291,10 @@
             this.btnComida.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnComida.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnComida.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnComida.Location = new System.Drawing.Point(438, 83);
+            this.btnComida.Location = new System.Drawing.Point(673, 76);
             this.btnComida.Margin = new System.Windows.Forms.Padding(2);
             this.btnComida.Name = "btnComida";
-            this.btnComida.Size = new System.Drawing.Size(109, 43);
+            this.btnComida.Size = new System.Drawing.Size(171, 65);
             this.btnComida.TabIndex = 9;
             this.btnComida.Text = "Comida";
             this.btnComida.UseVisualStyleBackColor = false;
@@ -304,30 +306,14 @@
             this.btnPostres.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnPostres.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnPostres.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPostres.Location = new System.Drawing.Point(557, 83);
+            this.btnPostres.Location = new System.Drawing.Point(913, 76);
             this.btnPostres.Margin = new System.Windows.Forms.Padding(2);
             this.btnPostres.Name = "btnPostres";
-            this.btnPostres.Size = new System.Drawing.Size(109, 43);
+            this.btnPostres.Size = new System.Drawing.Size(171, 65);
             this.btnPostres.TabIndex = 8;
             this.btnPostres.Text = "Postres";
             this.btnPostres.UseVisualStyleBackColor = false;
             this.btnPostres.Click += new System.EventHandler(this.btnPostres_Click);
-            // 
-            // btnPromociones
-            // 
-            this.btnPromociones.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
-            this.btnPromociones.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.btnPromociones.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnPromociones.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnPromociones.Location = new System.Drawing.Point(678, 83);
-            this.btnPromociones.Margin = new System.Windows.Forms.Padding(2);
-            this.btnPromociones.Name = "btnPromociones";
-            this.btnPromociones.Size = new System.Drawing.Size(109, 43);
-            this.btnPromociones.TabIndex = 7;
-            this.btnPromociones.Text = "Promociones";
-            this.btnPromociones.UseVisualStyleBackColor = false;
-            this.btnPromociones.UseWaitCursor = true;
-            this.btnPromociones.Click += new System.EventHandler(this.btnPromociones_Click);
             // 
             // btnBenidas
             // 
@@ -335,10 +321,10 @@
             this.btnBenidas.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnBenidas.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnBenidas.ForeColor = System.Drawing.SystemColors.Control;
-            this.btnBenidas.Location = new System.Drawing.Point(320, 83);
+            this.btnBenidas.Location = new System.Drawing.Point(438, 76);
             this.btnBenidas.Margin = new System.Windows.Forms.Padding(2);
             this.btnBenidas.Name = "btnBenidas";
-            this.btnBenidas.Size = new System.Drawing.Size(109, 43);
+            this.btnBenidas.Size = new System.Drawing.Size(171, 65);
             this.btnBenidas.TabIndex = 6;
             this.btnBenidas.Text = "Bebidas";
             this.btnBenidas.UseVisualStyleBackColor = false;
@@ -348,7 +334,7 @@
             // 
             this.lblTotal.AutoSize = true;
             this.lblTotal.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTotal.Location = new System.Drawing.Point(7, 220);
+            this.lblTotal.Location = new System.Drawing.Point(7, 438);
             this.lblTotal.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblTotal.Name = "lblTotal";
             this.lblTotal.Size = new System.Drawing.Size(70, 13);
@@ -367,9 +353,9 @@
             this.panelComida.Controls.Add(this.btnPapas);
             this.panelComida.Controls.Add(this.BtnBanderilla);
             this.panelComida.Controls.Add(this.btnHamburguesa);
-            this.panelComida.Location = new System.Drawing.Point(320, 131);
+            this.panelComida.Location = new System.Drawing.Point(411, 146);
             this.panelComida.Name = "panelComida";
-            this.panelComida.Size = new System.Drawing.Size(474, 331);
+            this.panelComida.Size = new System.Drawing.Size(911, 591);
             this.panelComida.TabIndex = 21;
             // 
             // pictureBox8
@@ -379,9 +365,9 @@
             this.pictureBox8.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox8.ErrorImage = global::interfaz_de_caja_registradora.Properties.Resources.hamburguesa;
-            this.pictureBox8.Location = new System.Drawing.Point(175, 23);
+            this.pictureBox8.Location = new System.Drawing.Point(383, 34);
             this.pictureBox8.Name = "pictureBox8";
-            this.pictureBox8.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox8.Size = new System.Drawing.Size(204, 124);
             this.pictureBox8.TabIndex = 22;
             this.pictureBox8.TabStop = false;
             // 
@@ -392,9 +378,9 @@
             this.pictureBox7.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox7.ErrorImage = global::interfaz_de_caja_registradora.Properties.Resources.naggets;
-            this.pictureBox7.Location = new System.Drawing.Point(330, 23);
+            this.pictureBox7.Location = new System.Drawing.Point(674, 34);
             this.pictureBox7.Name = "pictureBox7";
-            this.pictureBox7.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox7.Size = new System.Drawing.Size(211, 124);
             this.pictureBox7.TabIndex = 21;
             this.pictureBox7.TabStop = false;
             // 
@@ -404,9 +390,9 @@
             this.pictureBox5.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox5.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.pictureBox5.ErrorImage = global::interfaz_de_caja_registradora.Properties.Resources.papas_fritas;
-            this.pictureBox5.Location = new System.Drawing.Point(175, 170);
+            this.pictureBox5.Location = new System.Drawing.Point(363, 304);
             this.pictureBox5.Name = "pictureBox5";
-            this.pictureBox5.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox5.Size = new System.Drawing.Size(236, 135);
             this.pictureBox5.TabIndex = 20;
             this.pictureBox5.TabStop = false;
             // 
@@ -418,9 +404,9 @@
             this.pictureBox4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.pictureBox4.ErrorImage = global::interfaz_de_caja_registradora.Properties.Resources.banderillas;
             this.pictureBox4.ImageLocation = "";
-            this.pictureBox4.Location = new System.Drawing.Point(21, 23);
+            this.pictureBox4.Location = new System.Drawing.Point(47, 34);
             this.pictureBox4.Name = "pictureBox4";
-            this.pictureBox4.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox4.Size = new System.Drawing.Size(202, 124);
             this.pictureBox4.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
             this.pictureBox4.TabIndex = 19;
             this.pictureBox4.TabStop = false;
@@ -436,9 +422,9 @@
             this.panelPostres.Controls.Add(this.button3);
             this.panelPostres.Controls.Add(this.button2);
             this.panelPostres.Controls.Add(this.BtnDorinachos);
-            this.panelPostres.Location = new System.Drawing.Point(320, 130);
+            this.panelPostres.Location = new System.Drawing.Point(411, 146);
             this.panelPostres.Name = "panelPostres";
-            this.panelPostres.Size = new System.Drawing.Size(474, 331);
+            this.panelPostres.Size = new System.Drawing.Size(911, 641);
             this.panelPostres.TabIndex = 22;
             // 
             // pictureBox11
@@ -446,9 +432,9 @@
             this.pictureBox11.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.Gemini_Generated_Image_j8aj7jj8aj7jj8aj;
             this.pictureBox11.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox11.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox11.Location = new System.Drawing.Point(175, 33);
+            this.pictureBox11.Location = new System.Drawing.Point(370, 35);
             this.pictureBox11.Name = "pictureBox11";
-            this.pictureBox11.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox11.Size = new System.Drawing.Size(204, 137);
             this.pictureBox11.TabIndex = 21;
             this.pictureBox11.TabStop = false;
             // 
@@ -457,9 +443,9 @@
             this.pictureBox10.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.Gemini_Generated_Image_2209q42209q42209;
             this.pictureBox10.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox10.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox10.Location = new System.Drawing.Point(330, 33);
+            this.pictureBox10.Location = new System.Drawing.Point(664, 31);
             this.pictureBox10.Name = "pictureBox10";
-            this.pictureBox10.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox10.Size = new System.Drawing.Size(207, 134);
             this.pictureBox10.TabIndex = 20;
             this.pictureBox10.TabStop = false;
             // 
@@ -468,9 +454,9 @@
             this.pictureBox9.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.Gemini_Generated_Image_1dmkc51dmkc51dmk;
             this.pictureBox9.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox9.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox9.Location = new System.Drawing.Point(175, 174);
+            this.pictureBox9.Location = new System.Drawing.Point(361, 359);
             this.pictureBox9.Name = "pictureBox9";
-            this.pictureBox9.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox9.Size = new System.Drawing.Size(204, 137);
             this.pictureBox9.TabIndex = 19;
             this.pictureBox9.TabStop = false;
             // 
@@ -479,9 +465,9 @@
             this.pictureBox2.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.dorinachos;
             this.pictureBox2.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox2.Location = new System.Drawing.Point(21, 33);
+            this.pictureBox2.Location = new System.Drawing.Point(61, 35);
             this.pictureBox2.Name = "pictureBox2";
-            this.pictureBox2.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox2.Size = new System.Drawing.Size(208, 133);
             this.pictureBox2.TabIndex = 18;
             this.pictureBox2.TabStop = false;
             // 
@@ -489,9 +475,9 @@
             // 
             this.button4.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button4.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button4.Location = new System.Drawing.Point(166, 166);
+            this.button4.Location = new System.Drawing.Point(352, 351);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(138, 135);
+            this.button4.Size = new System.Drawing.Size(225, 225);
             this.button4.TabIndex = 17;
             this.button4.Text = "\r\n\r\n\r\n\r\n\r\n\r\nFresas con Crema 70$";
             this.button4.UseVisualStyleBackColor = true;
@@ -501,9 +487,9 @@
             // 
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button3.Location = new System.Drawing.Point(321, 23);
+            this.button3.Location = new System.Drawing.Point(655, 21);
             this.button3.Name = "button3";
-            this.button3.Size = new System.Drawing.Size(138, 135);
+            this.button3.Size = new System.Drawing.Size(225, 225);
             this.button3.TabIndex = 16;
             this.button3.Text = "\r\n\r\n\r\n\r\n\r\n\r\nFlan 50$";
             this.button3.UseVisualStyleBackColor = true;
@@ -513,9 +499,9 @@
             // 
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button2.Location = new System.Drawing.Point(166, 23);
+            this.button2.Location = new System.Drawing.Point(361, 25);
             this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(138, 135);
+            this.button2.Size = new System.Drawing.Size(225, 225);
             this.button2.TabIndex = 15;
             this.button2.Text = "\r\n\r\n\r\n\r\n\r\n\r\nBrownies 45$";
             this.button2.UseVisualStyleBackColor = true;
@@ -525,10 +511,10 @@
             // 
             this.BtnDorinachos.Cursor = System.Windows.Forms.Cursors.Hand;
             this.BtnDorinachos.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.BtnDorinachos.Location = new System.Drawing.Point(11, 23);
+            this.BtnDorinachos.Location = new System.Drawing.Point(51, 25);
             this.BtnDorinachos.Margin = new System.Windows.Forms.Padding(2);
             this.BtnDorinachos.Name = "BtnDorinachos";
-            this.BtnDorinachos.Size = new System.Drawing.Size(138, 135);
+            this.BtnDorinachos.Size = new System.Drawing.Size(225, 225);
             this.BtnDorinachos.TabIndex = 14;
             this.BtnDorinachos.Text = "\r\n\r\n\r\n\r\n\r\n\r\nDorinachos 70$";
             this.BtnDorinachos.UseVisualStyleBackColor = true;
@@ -545,9 +531,9 @@
             this.panelBebidas.Controls.Add(this.button6);
             this.panelBebidas.Controls.Add(this.button5);
             this.panelBebidas.Controls.Add(this.btnBebidas);
-            this.panelBebidas.Location = new System.Drawing.Point(320, 131);
+            this.panelBebidas.Location = new System.Drawing.Point(411, 146);
             this.panelBebidas.Name = "panelBebidas";
-            this.panelBebidas.Size = new System.Drawing.Size(474, 331);
+            this.panelBebidas.Size = new System.Drawing.Size(911, 591);
             this.panelBebidas.TabIndex = 24;
             this.panelBebidas.Paint += new System.Windows.Forms.PaintEventHandler(this.panelBebidas_Paint);
             // 
@@ -556,9 +542,9 @@
             this.pictureBox16.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.sprite;
             this.pictureBox16.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox16.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox16.Location = new System.Drawing.Point(175, 33);
+            this.pictureBox16.Location = new System.Drawing.Point(376, 43);
             this.pictureBox16.Name = "pictureBox16";
-            this.pictureBox16.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox16.Size = new System.Drawing.Size(211, 110);
             this.pictureBox16.TabIndex = 24;
             this.pictureBox16.TabStop = false;
             // 
@@ -567,9 +553,9 @@
             this.pictureBox15.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.jumex;
             this.pictureBox15.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox15.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox15.Location = new System.Drawing.Point(330, 33);
+            this.pictureBox15.Location = new System.Drawing.Point(687, 43);
             this.pictureBox15.Name = "pictureBox15";
-            this.pictureBox15.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox15.Size = new System.Drawing.Size(203, 125);
             this.pictureBox15.TabIndex = 23;
             this.pictureBox15.TabStop = false;
             // 
@@ -578,9 +564,9 @@
             this.pictureBox14.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.agua;
             this.pictureBox14.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox14.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox14.Location = new System.Drawing.Point(175, 187);
+            this.pictureBox14.Location = new System.Drawing.Point(376, 364);
             this.pictureBox14.Name = "pictureBox14";
-            this.pictureBox14.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox14.Size = new System.Drawing.Size(211, 128);
             this.pictureBox14.TabIndex = 22;
             this.pictureBox14.TabStop = false;
             // 
@@ -589,9 +575,9 @@
             this.pictureBox13.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.cocacola;
             this.pictureBox13.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
             this.pictureBox13.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.pictureBox13.Location = new System.Drawing.Point(19, 33);
+            this.pictureBox13.Location = new System.Drawing.Point(59, 43);
             this.pictureBox13.Name = "pictureBox13";
-            this.pictureBox13.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox13.Size = new System.Drawing.Size(204, 125);
             this.pictureBox13.TabIndex = 21;
             this.pictureBox13.TabStop = false;
             // 
@@ -599,12 +585,12 @@
             // 
             this.button7.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button7.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button7.Location = new System.Drawing.Point(321, 23);
+            this.button7.Location = new System.Drawing.Point(678, 33);
             this.button7.Margin = new System.Windows.Forms.Padding(2);
             this.button7.Name = "button7";
-            this.button7.Size = new System.Drawing.Size(138, 135);
+            this.button7.Size = new System.Drawing.Size(225, 225);
             this.button7.TabIndex = 20;
-            this.button7.Text = "\r\n\r\n\r\n\r\n\r\n\r\nJumex 20$\r\n ";
+            this.button7.Text = "\r\n\r\n\r\n\r\n\r\n\r\nJumex 20$";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.button7_Click_1);
             // 
@@ -612,12 +598,12 @@
             // 
             this.button6.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button6.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button6.Location = new System.Drawing.Point(166, 174);
+            this.button6.Location = new System.Drawing.Point(367, 351);
             this.button6.Margin = new System.Windows.Forms.Padding(2);
             this.button6.Name = "button6";
-            this.button6.Size = new System.Drawing.Size(138, 135);
+            this.button6.Size = new System.Drawing.Size(225, 225);
             this.button6.TabIndex = 19;
-            this.button6.Text = "\r\n\r\n\r\n\r\n\r\n\r\nAgua 15$\r\n  ";
+            this.button6.Text = "\r\n\r\n\r\n\r\n\r\n\r\nAgua 15$";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.button6_Click);
             // 
@@ -626,12 +612,12 @@
             this.button5.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button5.Font = new System.Drawing.Font("Gadugi", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button5.ForeColor = System.Drawing.SystemColors.ControlText;
-            this.button5.Location = new System.Drawing.Point(166, 23);
+            this.button5.Location = new System.Drawing.Point(367, 33);
             this.button5.Margin = new System.Windows.Forms.Padding(2);
             this.button5.Name = "button5";
-            this.button5.Size = new System.Drawing.Size(138, 135);
+            this.button5.Size = new System.Drawing.Size(225, 225);
             this.button5.TabIndex = 18;
-            this.button5.Text = " \r\n\r\n\r\n\r\n\r\n\r\n  Sprite 25$\r\n    \r\n\r\n\r\n    \r\n\r\n    \r\n";
+            this.button5.Text = " \r\n\r\n\r\n\r\n\r\n\r\n  Sprite 25$";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.button5_Click);
             // 
@@ -646,18 +632,18 @@
             this.panelPromociones.Controls.Add(this.button10);
             this.panelPromociones.Controls.Add(this.button9);
             this.panelPromociones.Controls.Add(this.button8);
-            this.panelPromociones.Location = new System.Drawing.Point(320, 130);
+            this.panelPromociones.Location = new System.Drawing.Point(411, 146);
             this.panelPromociones.Name = "panelPromociones";
-            this.panelPromociones.Size = new System.Drawing.Size(474, 331);
+            this.panelPromociones.Size = new System.Drawing.Size(911, 591);
             this.panelPromociones.TabIndex = 23;
             // 
             // pictureBox12
             // 
             this.pictureBox12.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.combo_2;
             this.pictureBox12.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox12.Location = new System.Drawing.Point(175, 33);
+            this.pictureBox12.Location = new System.Drawing.Point(381, 28);
             this.pictureBox12.Name = "pictureBox12";
-            this.pictureBox12.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox12.Size = new System.Drawing.Size(206, 125);
             this.pictureBox12.TabIndex = 7;
             this.pictureBox12.TabStop = false;
             // 
@@ -665,9 +651,9 @@
             // 
             this.pictureBox6.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.promo3;
             this.pictureBox6.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox6.Location = new System.Drawing.Point(330, 33);
+            this.pictureBox6.Location = new System.Drawing.Point(664, 27);
             this.pictureBox6.Name = "pictureBox6";
-            this.pictureBox6.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox6.Size = new System.Drawing.Size(206, 125);
             this.pictureBox6.TabIndex = 6;
             this.pictureBox6.TabStop = false;
             // 
@@ -675,9 +661,9 @@
             // 
             this.pictureBox3.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.promo4;
             this.pictureBox3.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox3.Location = new System.Drawing.Point(175, 175);
+            this.pictureBox3.Location = new System.Drawing.Point(372, 307);
             this.pictureBox3.Name = "pictureBox3";
-            this.pictureBox3.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox3.Size = new System.Drawing.Size(205, 118);
             this.pictureBox3.TabIndex = 5;
             this.pictureBox3.TabStop = false;
             // 
@@ -685,9 +671,9 @@
             // 
             this.pictureBox1.BackgroundImage = global::interfaz_de_caja_registradora.Properties.Resources.promocion1;
             this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Stretch;
-            this.pictureBox1.Location = new System.Drawing.Point(21, 33);
+            this.pictureBox1.Location = new System.Drawing.Point(70, 33);
             this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(120, 81);
+            this.pictureBox1.Size = new System.Drawing.Size(206, 125);
             this.pictureBox1.TabIndex = 4;
             this.pictureBox1.TabStop = false;
             // 
@@ -695,9 +681,9 @@
             // 
             this.button11.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button11.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button11.Location = new System.Drawing.Point(166, 166);
+            this.button11.Location = new System.Drawing.Point(363, 298);
             this.button11.Name = "button11";
-            this.button11.Size = new System.Drawing.Size(138, 135);
+            this.button11.Size = new System.Drawing.Size(225, 225);
             this.button11.TabIndex = 3;
             this.button11.Text = "\r\n\r\n\r\n\r\n\r\n\r\nCombo dulce 2x $90";
             this.button11.UseVisualStyleBackColor = true;
@@ -707,9 +693,9 @@
             // 
             this.button10.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button10.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button10.Location = new System.Drawing.Point(321, 23);
+            this.button10.Location = new System.Drawing.Point(655, 17);
             this.button10.Name = "button10";
-            this.button10.Size = new System.Drawing.Size(138, 135);
+            this.button10.Size = new System.Drawing.Size(225, 225);
             this.button10.TabIndex = 2;
             this.button10.Text = "\r\n\r\n\r\n\r\n\r\n\r\nCombo pa compartir 119$";
             this.button10.UseVisualStyleBackColor = true;
@@ -719,9 +705,9 @@
             // 
             this.button9.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button9.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button9.Location = new System.Drawing.Point(166, 23);
+            this.button9.Location = new System.Drawing.Point(372, 17);
             this.button9.Name = "button9";
-            this.button9.Size = new System.Drawing.Size(138, 135);
+            this.button9.Size = new System.Drawing.Size(225, 225);
             this.button9.TabIndex = 1;
             this.button9.Text = "\r\n\r\n\r\n\r\n\r\n\r\nCombo Antojo 109$\r\n";
             this.button9.UseVisualStyleBackColor = true;
@@ -731,9 +717,9 @@
             // 
             this.button8.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button8.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button8.Location = new System.Drawing.Point(11, 23);
+            this.button8.Location = new System.Drawing.Point(60, 23);
             this.button8.Name = "button8";
-            this.button8.Size = new System.Drawing.Size(138, 135);
+            this.button8.Size = new System.Drawing.Size(225, 225);
             this.button8.TabIndex = 0;
             this.button8.Text = "\r\n\r\n\r\n\r\n\r\n\r\ncombo feliz 120$";
             this.button8.UseVisualStyleBackColor = true;
@@ -757,6 +743,8 @@
             // 
             this.panel1.BackColor = System.Drawing.Color.White;
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
+            this.panel1.Controls.Add(this.rbDolares);
+            this.panel1.Controls.Add(this.rbPesos);
             this.panel1.Controls.Add(this.lblCambio);
             this.panel1.Controls.Add(this.ListaVenta);
             this.panel1.Controls.Add(this.lblTotal);
@@ -765,14 +753,38 @@
             this.panel1.Controls.Add(this.txtPago);
             this.panel1.Location = new System.Drawing.Point(59, 123);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(242, 349);
+            this.panel1.Size = new System.Drawing.Size(333, 614);
             this.panel1.TabIndex = 26;
+            // 
+            // rbDolares
+            // 
+            this.rbDolares.AutoSize = true;
+            this.rbDolares.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbDolares.Location = new System.Drawing.Point(92, 394);
+            this.rbDolares.Name = "rbDolares";
+            this.rbDolares.Size = new System.Drawing.Size(61, 17);
+            this.rbDolares.TabIndex = 24;
+            this.rbDolares.TabStop = true;
+            this.rbDolares.Text = "Dolares";
+            this.rbDolares.UseVisualStyleBackColor = true;
+            // 
+            // rbPesos
+            // 
+            this.rbPesos.AutoSize = true;
+            this.rbPesos.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.rbPesos.Location = new System.Drawing.Point(10, 394);
+            this.rbPesos.Name = "rbPesos";
+            this.rbPesos.Size = new System.Drawing.Size(54, 17);
+            this.rbPesos.TabIndex = 23;
+            this.rbPesos.TabStop = true;
+            this.rbPesos.Text = "Pesos";
+            this.rbPesos.UseVisualStyleBackColor = true;
             // 
             // lblCambio
             // 
             this.lblCambio.AutoSize = true;
             this.lblCambio.Font = new System.Drawing.Font("Microsoft Sans Serif", 7.8F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblCambio.Location = new System.Drawing.Point(10, 195);
+            this.lblCambio.Location = new System.Drawing.Point(7, 468);
             this.lblCambio.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.lblCambio.Name = "lblCambio";
             this.lblCambio.Size = new System.Drawing.Size(65, 13);
@@ -786,7 +798,7 @@
             this.panel2.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel2.Location = new System.Drawing.Point(3, -1);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(50, 512);
+            this.panel2.Size = new System.Drawing.Size(50, 755);
             this.panel2.TabIndex = 27;
             // 
             // menuOpciones
@@ -839,28 +851,43 @@
             this.button12.UseWaitCursor = true;
             this.button12.Click += new System.EventHandler(this.button12_Click);
             // 
-            // button13
+            // button14
             // 
-            this.button13.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
-            this.button13.Cursor = System.Windows.Forms.Cursors.WaitCursor;
-            this.button13.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button13.ForeColor = System.Drawing.SystemColors.Control;
-            this.button13.Location = new System.Drawing.Point(731, 13);
-            this.button13.Margin = new System.Windows.Forms.Padding(2);
-            this.button13.Name = "button13";
-            this.button13.Size = new System.Drawing.Size(89, 29);
-            this.button13.TabIndex = 28;
-            this.button13.Text = "Cocinero";
-            this.button13.UseVisualStyleBackColor = false;
-            this.button13.UseWaitCursor = true;
-            this.button13.Click += new System.EventHandler(this.button13_Click);
+            this.button14.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
+            this.button14.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button14.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button14.ForeColor = System.Drawing.SystemColors.Control;
+            this.button14.Location = new System.Drawing.Point(1145, 76);
+            this.button14.Margin = new System.Windows.Forms.Padding(2);
+            this.button14.Name = "button14";
+            this.button14.Size = new System.Drawing.Size(171, 65);
+            this.button14.TabIndex = 28;
+            this.button14.Text = "Promociones";
+            this.button14.UseVisualStyleBackColor = false;
+            this.button14.Click += new System.EventHandler(this.button14_Click);
+            // 
+            // button15
+            // 
+            this.button15.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
+            this.button15.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.button15.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.button15.ForeColor = System.Drawing.SystemColors.Control;
+            this.button15.Location = new System.Drawing.Point(1159, 24);
+            this.button15.Margin = new System.Windows.Forms.Padding(2);
+            this.button15.Name = "button15";
+            this.button15.Size = new System.Drawing.Size(89, 29);
+            this.button15.TabIndex = 29;
+            this.button15.Text = "Cocinero";
+            this.button15.UseVisualStyleBackColor = false;
+            this.button15.Click += new System.EventHandler(this.button15_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.Silver;
-            this.ClientSize = new System.Drawing.Size(920, 509);
+            this.ClientSize = new System.Drawing.Size(1348, 749);
+            this.Controls.Add(this.button14);
             this.Controls.Add(this.panelPostres);
             this.Controls.Add(this.panelPromociones);
             this.Controls.Add(this.label1);
@@ -868,16 +895,18 @@
             this.Controls.Add(this.panelBebidas);
             this.Controls.Add(this.panelComida);
             this.Controls.Add(this.btnBenidas);
-            this.Controls.Add(this.btnPromociones);
             this.Controls.Add(this.btnPostres);
             this.Controls.Add(this.btnComida);
             this.Controls.Add(this.panel4);
             this.Controls.Add(this.panel2);
             this.ForeColor = System.Drawing.SystemColors.ControlText;
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Margin = new System.Windows.Forms.Padding(2);
             this.MaximizeBox = false;
             this.Name = "Form1";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.TransparencyKey = System.Drawing.Color.Yellow;
+            this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel4.ResumeLayout(false);
             this.panel4.PerformLayout();
@@ -925,7 +954,6 @@
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Button btnComida;
         private System.Windows.Forms.Button btnPostres;
-        private System.Windows.Forms.Button btnPromociones;
         private System.Windows.Forms.Button btnBenidas;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblTotal;
@@ -969,7 +997,10 @@
         private System.Windows.Forms.PictureBox pictureBox14;
         private System.Windows.Forms.Label lblCambio;
         private System.Windows.Forms.Button button12;
-        private System.Windows.Forms.Button button13;
+        private System.Windows.Forms.RadioButton rbDolares;
+        private System.Windows.Forms.RadioButton rbPesos;
+        private System.Windows.Forms.Button button14;
+        private System.Windows.Forms.Button button15;
     }
 }
 

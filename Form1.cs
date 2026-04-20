@@ -205,17 +205,33 @@ namespace interfaz_de_caja_registradora
 
         private void button1_Click(object sender, EventArgs e)
         {
-            double pago;
-            if (!double.TryParse(txtPago.Text.Trim(), out pago) || pago < total)
+            double pagoIngresado;
+            if (!double.TryParse(txtPago.Text.Trim(), out pagoIngresado))
             {
-                MessageBox.Show("Pago insuficiente o inválido.");
+                MessageBox.Show("Ingresa una cantidad válida.");
                 return;
             }
 
-            // 1. Calculamos el cambio ANTES de guardar en la base de datos
-            double cambio = pago - total;
+            double tipoDeCambio = 20.00;
+            double pagoEnPesos = pagoIngresado;
+
+            // Antes de cobrar, convertimos si son dólares
+            if (rbDolares.Checked == true)
+            {
+                pagoEnPesos = pagoIngresado * tipoDeCambio;
+            }
+
+            // Verificamos si alcanza (usando los pesos)
+            if (pagoEnPesos < total)
+            {
+                MessageBox.Show("Pago insuficiente.");
+                return;
+            }
+
+            // Calculamos el cambio final
+            double cambio = pagoEnPesos - total;
             lblCambio.Text = "Cambio: $" + cambio.ToString("0.00");
-            lblCambio.Refresh(); // Forzamos a que se muestre en pantalla rápido
+            lblCambio.Refresh();
 
             ConexionBD bd = new ConexionBD();
             bd.abrir();
@@ -270,7 +286,7 @@ namespace interfaz_de_caja_registradora
                 // ---> NUEVO: GENERAR EL TICKET <---
                 // Guardamos los datos temporalmente
                 ticketId = idVentaGenerada;
-                ticketPago = pago;
+                ticketPago = pagoEnPesos;
                 ticketCambio = cambio;
 
                 // Preparamos el documento
@@ -364,7 +380,47 @@ namespace interfaz_de_caja_registradora
 
         private void txtPago_TextChanged(object sender, EventArgs e)
         {
+            // 1. Tipo de cambio (Ponle 20.00 o 18.00, lo que prefieras)
+            decimal tipoDeCambio = 20.00m;
 
+            // 2. Aquí está tu variable global conectada y convertida a decimal
+            decimal totalVentaPesos = (decimal)total;
+
+            if (decimal.TryParse(txtPago.Text, out decimal dineroIngresado))
+            {
+                decimal efectivoFinalEnPesos;
+
+                // 4. Asegúrate de que tu circulito de dólares se llame 'rbDolares'
+                if (rbDolares.Checked == true)
+                {
+                    efectivoFinalEnPesos = dineroIngresado * tipoDeCambio; // Convierte a pesos
+                }
+                else
+                {
+                    efectivoFinalEnPesos = dineroIngresado; // Pasa directo
+                }
+
+                decimal cambio = efectivoFinalEnPesos - totalVentaPesos;
+
+                if (cambio >= 0)
+                {
+                    lblCambio.Text = "Cambio: " + cambio.ToString("C");
+                    lblCambio.ForeColor = Color.LimeGreen;
+                    button1.Enabled = true;
+                }
+                else
+                {
+                    lblCambio.Text = "Falta dinero";
+                    lblCambio.ForeColor = Color.Red;
+                    button1.Enabled = false;
+                }
+            }
+            else
+            {
+                lblCambio.Text = "Cambio: $0.00";
+                lblCambio.ForeColor = Color.White;
+                button1.Enabled = false;
+            }
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)
@@ -631,12 +687,25 @@ namespace interfaz_de_caja_registradora
             // 2. ¡LA MAGIA AQUÍ! Usamos Show() en lugar de ShowDialog()
             pantallaChef.Show();
         }
+    
+        private void button14_Click(object sender, EventArgs e)
+        {
+            panelComida.Visible = false;
+            panelBebidas.Visible = false;
+            panelPostres.Visible = false;
+            panelPromociones.Visible = true;
+
+            panelPromociones.BringToFront();
+        }
+
+        private void button15_Click(object sender, EventArgs e)
+        {
+            // 1. Creamos la ventanita del cocinero (Asegúrate de poner el nombre correcto de tu Form de cocina)
+            Chef pantallaChef = new Chef();
+
+            // 2. ¡LA MAGIA AQUÍ! Usamos Show() en lugar de ShowDialog()
+            pantallaChef.Show();
+        }
     }
 
 }
-
-
-
-
-
-

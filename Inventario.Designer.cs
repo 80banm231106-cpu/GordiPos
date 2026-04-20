@@ -41,11 +41,9 @@
             this.txtBuscar = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel4 = new System.Windows.Forms.Panel();
-            this.txtCategorias = new System.Windows.Forms.TextBox();
             this.txtBajoStock = new System.Windows.Forms.TextBox();
             this.txtTotal = new System.Windows.Forms.TextBox();
             this.label6 = new System.Windows.Forms.Label();
-            this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).BeginInit();
             this.panel1.SuspendLayout();
@@ -61,7 +59,7 @@
             this.dataGridView1.Location = new System.Drawing.Point(12, 94);
             this.dataGridView1.Name = "dataGridView1";
             this.dataGridView1.RowHeadersWidth = 51;
-            this.dataGridView1.Size = new System.Drawing.Size(506, 344);
+            this.dataGridView1.Size = new System.Drawing.Size(401, 409);
             this.dataGridView1.TabIndex = 0;
             this.dataGridView1.CellContentClick += new System.Windows.Forms.DataGridViewCellEventHandler(this.dataGridView1_CellContentClick);
             // 
@@ -87,7 +85,7 @@
             this.btnRegreso.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnRegreso.ForeColor = System.Drawing.SystemColors.Control;
             this.btnRegreso.Location = new System.Drawing.Point(765, 16);
-            this.btnRegreso.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnRegreso.Margin = new System.Windows.Forms.Padding(2);
             this.btnRegreso.Name = "btnRegreso";
             this.btnRegreso.Size = new System.Drawing.Size(48, 31);
             this.btnRegreso.TabIndex = 13;
@@ -115,9 +113,9 @@
             this.panel2.Controls.Add(this.pictureBox1);
             this.panel2.Controls.Add(this.txtBuscar);
             this.panel2.Controls.Add(this.label2);
-            this.panel2.Location = new System.Drawing.Point(575, 94);
+            this.panel2.Location = new System.Drawing.Point(537, 94);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(200, 256);
+            this.panel2.Size = new System.Drawing.Size(252, 192);
             this.panel2.TabIndex = 2;
             // 
             // button3
@@ -126,7 +124,7 @@
             this.button3.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button3.ForeColor = System.Drawing.Color.White;
-            this.button3.Location = new System.Drawing.Point(98, 134);
+            this.button3.Location = new System.Drawing.Point(140, 134);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(89, 42);
             this.button3.TabIndex = 5;
@@ -140,7 +138,7 @@
             this.button2.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.button2.ForeColor = System.Drawing.Color.White;
-            this.button2.Location = new System.Drawing.Point(3, 134);
+            this.button2.Location = new System.Drawing.Point(18, 134);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(89, 42);
             this.button2.TabIndex = 4;
@@ -153,9 +151,9 @@
             this.button1.BackColor = System.Drawing.Color.Lime;
             this.button1.Cursor = System.Windows.Forms.Cursors.Hand;
             this.button1.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.button1.Location = new System.Drawing.Point(9, 85);
+            this.button1.Location = new System.Drawing.Point(18, 85);
             this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(178, 33);
+            this.button1.Size = new System.Drawing.Size(208, 43);
             this.button1.TabIndex = 3;
             this.button1.Text = "Añadir producto";
             this.button1.UseVisualStyleBackColor = false;
@@ -178,7 +176,7 @@
             this.txtBuscar.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.txtBuscar.Location = new System.Drawing.Point(42, 46);
             this.txtBuscar.Name = "txtBuscar";
-            this.txtBuscar.Size = new System.Drawing.Size(145, 21);
+            this.txtBuscar.Size = new System.Drawing.Size(198, 21);
             this.txtBuscar.TabIndex = 1;
             this.txtBuscar.TextChanged += new System.EventHandler(this.textBox1_TextChanged);
             // 
@@ -186,7 +184,7 @@
             // 
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(8, 8);
+            this.label2.Location = new System.Drawing.Point(38, 9);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(179, 20);
             this.label2.TabIndex = 0;
@@ -195,24 +193,14 @@
             // panel4
             // 
             this.panel4.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.panel4.Controls.Add(this.txtCategorias);
             this.panel4.Controls.Add(this.txtBajoStock);
             this.panel4.Controls.Add(this.txtTotal);
             this.panel4.Controls.Add(this.label6);
-            this.panel4.Controls.Add(this.label5);
             this.panel4.Controls.Add(this.label4);
-            this.panel4.Location = new System.Drawing.Point(524, 381);
+            this.panel4.Location = new System.Drawing.Point(537, 423);
             this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(252, 111);
+            this.panel4.Size = new System.Drawing.Size(252, 80);
             this.panel4.TabIndex = 3;
-            // 
-            // txtCategorias
-            // 
-            this.txtCategorias.BackColor = System.Drawing.SystemColors.ScrollBar;
-            this.txtCategorias.Location = new System.Drawing.Point(140, 63);
-            this.txtCategorias.Name = "txtCategorias";
-            this.txtCategorias.Size = new System.Drawing.Size(100, 20);
-            this.txtCategorias.TabIndex = 5;
             // 
             // txtBajoStock
             // 
@@ -241,16 +229,6 @@
             this.label6.Text = "Bajo Stock:";
             this.label6.Click += new System.EventHandler(this.label6_Click);
             // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 9F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(5, 68);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(80, 15);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Categorias:";
-            // 
             // label4
             // 
             this.label4.AutoSize = true;
@@ -275,6 +253,7 @@
             this.Controls.Add(this.dataGridView1);
             this.Name = "Inventario";
             this.Text = "Inventario";
+            this.Load += new System.EventHandler(this.Inventario_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dataGridView1)).EndInit();
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
@@ -301,9 +280,7 @@
         private System.Windows.Forms.Button button3;
         private System.Windows.Forms.Panel panel4;
         private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox txtCategorias;
         private System.Windows.Forms.TextBox txtBajoStock;
         private System.Windows.Forms.TextBox txtTotal;
         private System.Windows.Forms.Button btnRegreso;

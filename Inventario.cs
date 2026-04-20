@@ -73,11 +73,11 @@ namespace interfaz_de_caja_registradora
                 txtBajoStock.Text = productosBajos.ToString();
 
                 // Categorías se queda en 0 por ahora porque no tenemos esa columna en la BD
-                txtCategorias.Text = "0";
+                //txtCategorias.Text = "0";
 
                 // (Opcional) Si en tu base de datos tienes una columna 'categoria', podrías contarla aquí.
                 // Si no la tienes aún, lo dejamos en 0.
-                txtCategorias.Text = "0";
+               // txtCategorias.Text = "0";
             }
             catch (Exception ex)
             {
@@ -182,6 +182,11 @@ namespace interfaz_de_caja_registradora
             {
                 MessageBox.Show("Por favor, selecciona toda la fila del producto que deseas editar (dando clic en la flechita de la izquierda de la tabla).", "Aviso", MessageBoxButtons.OK, MessageBoxIcon.Warning);
             }
+        }
+
+        private void Inventario_Load(object sender, EventArgs e)
+        {
+
         }
     }
 }
