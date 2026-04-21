@@ -14,6 +14,7 @@ namespace interfaz_de_caja_registradora
     {
         public Bienvenida()
         {
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
         }
 
@@ -100,6 +101,11 @@ namespace interfaz_de_caja_registradora
         }
 
         private void pictureBox2_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox1_Click(object sender, EventArgs e)
         {
 
         }

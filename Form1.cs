@@ -366,6 +366,7 @@ namespace interfaz_de_caja_registradora
 
         private void Form1_Load(object sender, EventArgs e)
         {
+            this.WindowState = FormWindowState.Maximized;
             // Mostrar solo el menú principal al inicio
             panelComida.Visible = true;
             panelBebidas.Visible = false;
@@ -720,6 +721,21 @@ namespace interfaz_de_caja_registradora
         }
 
         private void panelPostres_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void pictureBox7_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox8_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pictureBox4_Click(object sender, EventArgs e)
         {
 
         }

@@ -50,7 +50,7 @@
             // txtFondo
             // 
             this.txtFondo.Location = new System.Drawing.Point(131, 165);
-            this.txtFondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.txtFondo.Margin = new System.Windows.Forms.Padding(4);
             this.txtFondo.Name = "txtFondo";
             this.txtFondo.Size = new System.Drawing.Size(184, 22);
             this.txtFondo.TabIndex = 1;
@@ -59,8 +59,8 @@
             // 
             this.btnAbrirCaja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbrirCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrirCaja.Location = new System.Drawing.Point(131, 230);
-            this.btnAbrirCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.btnAbrirCaja.Location = new System.Drawing.Point(128, 230);
+            this.btnAbrirCaja.Margin = new System.Windows.Forms.Padding(4);
             this.btnAbrirCaja.Name = "btnAbrirCaja";
             this.btnAbrirCaja.Size = new System.Drawing.Size(185, 87);
             this.btnAbrirCaja.TabIndex = 2;
@@ -74,7 +74,7 @@
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label2);
             this.panel1.Location = new System.Drawing.Point(-23, -1);
-            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4);
             this.panel1.Name = "panel1";
             this.panel1.Size = new System.Drawing.Size(508, 67);
             this.panel1.TabIndex = 3;
@@ -100,7 +100,7 @@
             this.Controls.Add(this.btnAbrirCaja);
             this.Controls.Add(this.txtFondo);
             this.Controls.Add(this.label1);
-            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
+            this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "AperturaCaja";
             this.Text = "AperturaCaja";
             this.Load += new System.EventHandler(this.AperturaCaja_Load);
