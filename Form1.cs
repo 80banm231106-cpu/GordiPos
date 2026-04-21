@@ -39,61 +39,73 @@ namespace interfaz_de_caja_registradora
 
         private void FormatoTicket(object sender, System.Drawing.Printing.PrintPageEventArgs e)
         {
-            // 1. Configuramos las fuentes (Tipografías)
-            Font fuenteTitulo = new Font("Courier New", 14, FontStyle.Bold);
-            Font fuenteNormal = new Font("Courier New", 10, FontStyle.Regular);
-            Font fuentePequeña = new Font("Courier New", 8, FontStyle.Regular);
+           
+            // 1. Configuramos las fuentes
+            Font fuenteTitulo = new Font("Courier New", 10, FontStyle.Bold);
+            Font fuenteNormal = new Font("Courier New", 8, FontStyle.Regular);
+            Font fuenteNegrita = new Font("Courier New", 8, FontStyle.Bold); // Nueva para encabezados
+            Font fuentePequeña = new Font("Courier New", 7, FontStyle.Regular);
 
-            // Margen izquierdo y posición inicial desde arriba (Eje Y)
-            int margenIzq = 10;
-            int y = 20;
+            int margenIzq = 2;
+            int y = 10;
 
             // --- ENCABEZADO ---
-            e.Graphics.DrawString("🍔 GORDIFELIZ 🍔", fuenteTitulo, Brushes.Black, margenIzq + 30, y);
-            y += 25;
-            e.Graphics.DrawString("Ticket Folio: #" + ticketId, fuenteNormal, Brushes.Black, margenIzq, y);
-            y += 20;
-            e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm"), fuentePequeña, Brushes.Black, margenIzq, y);
-            y += 25;
-            e.Graphics.DrawString("--------------------------------", fuenteNormal, Brushes.Black, margenIzq, y);
+            e.Graphics.DrawString("🍔 GORDIFELIZ 🍔", fuenteTitulo, Brushes.Black, margenIzq + 20, y);
             y += 20;
 
+            e.Graphics.DrawString("Ticket Folio: #" + ticketId, fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 15;
+
+            e.Graphics.DrawString("Fecha: " + DateTime.Now.ToString("dd/MM/yy HH:mm"), fuentePequeña, Brushes.Black, margenIzq, y);
+            y += 15;
+
+            e.Graphics.DrawString("----------------------------", fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 15;
+
             // --- DETALLE DE PRODUCTOS ---
-            e.Graphics.DrawString("CANT  DESCRIPCIÓN       PRECIO", fuenteNormal, Brushes.Black, margenIzq, y);
-            y += 20;
-            e.Graphics.DrawString("--------------------------------", fuenteNormal, Brushes.Black, margenIzq, y);
-            y += 20;
+            // CORRECCIÓN AQUÍ: Usamos Brushes.Black y fuenteNegrita
+            e.Graphics.DrawString("CAN DESCRIPCION    PRECIO", fuenteNegrita, Brushes.Black, margenIzq, y);
+            y += 15;
+            e.Graphics.DrawString("----------------------------", fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 15;
 
             foreach (var item in ListaVenta.Items)
             {
-                // Separamos el nombre del precio (Ej: "Hamburguesa - $80")
                 string[] partes = item.ToString().Split('-');
                 string nombre = partes[0].Trim();
                 string precio = partes[1].Trim();
 
-                // Si el nombre es muy largo, lo cortamos para que no desacomode el ticket
-                if (nombre.Length > 15) nombre = nombre.Substring(0, 15);
+                if (nombre.Length > 12) nombre = nombre.Substring(0, 12);
 
-                // Acomodamos en columnas: 1 | Producto | Precio
-                string lineaProducto = $"1    {nombre,-15} {precio}";
+                // Formato: Cantidad(2) + Espacio + Nombre(12) + Precio(8)
+                string lineaProducto = string.Format("{0,-2} {1,-12} {2,8}", "1", nombre, precio);
+
                 e.Graphics.DrawString(lineaProducto, fuenteNormal, Brushes.Black, margenIzq, y);
-                y += 20; // Bajamos 20 pixeles para el siguiente producto
+                y += 15;
             }
 
             // --- TOTALES ---
-            y += 10;
-            e.Graphics.DrawString("--------------------------------", fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 5;
+            e.Graphics.DrawString("----------------------------", fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 15;
+
+            e.Graphics.DrawString("TOTAL:     $" + total.ToString("0.00"), fuenteTitulo, Brushes.Black, margenIzq, y);
             y += 20;
-            e.Graphics.DrawString("TOTAL:          $" + total.ToString("0.00"), fuenteTitulo, Brushes.Black, margenIzq, y);
-            y += 25;
-            e.Graphics.DrawString("PAGÓ CON:       $" + ticketPago.ToString("0.00"), fuenteNormal, Brushes.Black, margenIzq, y);
-            y += 20;
-            e.Graphics.DrawString("SU CAMBIO:      $" + ticketCambio.ToString("0.00"), fuenteNormal, Brushes.Black, margenIzq, y);
+
+            e.Graphics.DrawString("PAGO CON:  $" + ticketPago.ToString("0.00"), fuenteNormal, Brushes.Black, margenIzq, y);
+            y += 15;
+
+            e.Graphics.DrawString("CAMBIO:    $" + ticketCambio.ToString("0.00"), fuenteNormal, Brushes.Black, margenIzq, y);
 
             // --- PIE DE PÁGINA ---
-            y += 40;
-            e.Graphics.DrawString("¡Gracias por su preferencia!", fuenteNormal, Brushes.Black, margenIzq + 10, y);
+            y += 30;
+            e.Graphics.DrawString("¡Gracias por su compra!", fuentePequeña, Brushes.Black, margenIzq + 15, y);
+
+            // El puntito invisible al final ayuda a que la impresora termine de sacar el papel
+            y += 20;
+            e.Graphics.DrawString(".", fuentePequeña, Brushes.Transparent, margenIzq, y);
         }
+        
         private void VerificarSugerencias()
         {
             if (!SugerenciaMostrada &&
@@ -705,6 +717,11 @@ namespace interfaz_de_caja_registradora
 
             // 2. ¡LA MAGIA AQUÍ! Usamos Show() en lugar de ShowDialog()
             pantallaChef.Show();
+        }
+
+        private void panelPostres_Paint(object sender, PaintEventArgs e)
+        {
+
         }
     }
 

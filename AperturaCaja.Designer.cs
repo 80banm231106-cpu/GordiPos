@@ -40,26 +40,29 @@
             // 
             this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 15.75F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(12, 80);
+            this.label1.Location = new System.Drawing.Point(16, 98);
+            this.label1.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(316, 25);
+            this.label1.Size = new System.Drawing.Size(387, 31);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ingrese fondo inicial de caja:";
             // 
             // txtFondo
             // 
-            this.txtFondo.Location = new System.Drawing.Point(98, 134);
+            this.txtFondo.Location = new System.Drawing.Point(131, 165);
+            this.txtFondo.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.txtFondo.Name = "txtFondo";
-            this.txtFondo.Size = new System.Drawing.Size(139, 20);
+            this.txtFondo.Size = new System.Drawing.Size(184, 22);
             this.txtFondo.TabIndex = 1;
             // 
             // btnAbrirCaja
             // 
             this.btnAbrirCaja.Cursor = System.Windows.Forms.Cursors.Hand;
             this.btnAbrirCaja.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.btnAbrirCaja.Location = new System.Drawing.Point(98, 187);
+            this.btnAbrirCaja.Location = new System.Drawing.Point(131, 230);
+            this.btnAbrirCaja.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.btnAbrirCaja.Name = "btnAbrirCaja";
-            this.btnAbrirCaja.Size = new System.Drawing.Size(139, 71);
+            this.btnAbrirCaja.Size = new System.Drawing.Size(185, 87);
             this.btnAbrirCaja.TabIndex = 2;
             this.btnAbrirCaja.Text = "Comenzar turno";
             this.btnAbrirCaja.UseVisualStyleBackColor = true;
@@ -70,9 +73,10 @@
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(31)))), ((int)(((byte)(58)))), ((int)(((byte)(95)))));
             this.panel1.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
             this.panel1.Controls.Add(this.label2);
-            this.panel1.Location = new System.Drawing.Point(-17, -1);
+            this.panel1.Location = new System.Drawing.Point(-23, -1);
+            this.panel1.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(382, 55);
+            this.panel1.Size = new System.Drawing.Size(508, 67);
             this.panel1.TabIndex = 3;
             // 
             // label2
@@ -80,21 +84,23 @@
             this.label2.AutoSize = true;
             this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 20.25F, ((System.Drawing.FontStyle)((System.Drawing.FontStyle.Bold | System.Drawing.FontStyle.Italic))), System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.label2.ForeColor = System.Drawing.Color.White;
-            this.label2.Location = new System.Drawing.Point(52, 8);
+            this.label2.Location = new System.Drawing.Point(69, 10);
+            this.label2.Margin = new System.Windows.Forms.Padding(4, 0, 4, 0);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(275, 31);
+            this.label2.Size = new System.Drawing.Size(342, 39);
             this.label2.TabIndex = 0;
             this.label2.Text = "Bienvenido Usuario ";
             // 
             // AperturaCaja
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 16F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(332, 309);
+            this.ClientSize = new System.Drawing.Size(434, 378);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.btnAbrirCaja);
             this.Controls.Add(this.txtFondo);
             this.Controls.Add(this.label1);
+            this.Margin = new System.Windows.Forms.Padding(4, 4, 4, 4);
             this.Name = "AperturaCaja";
             this.Text = "AperturaCaja";
             this.Load += new System.EventHandler(this.AperturaCaja_Load);

@@ -1,26 +1,70 @@
 {
   "Version": 1,
-  "WorkspaceRootPath": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\",
+  "WorkspaceRootPath": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\",
   "Documents": [
     {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\jaque\\source\\repos\\gordiposs\\bienvenida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:bienvenida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\bienvenida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:bienvenida.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
-      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\brand\\downloads\\recyagr\\rec\u0026agr\\rec\u0026agr\\interfazcajaregistradora-recup06\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Jaque\\source\\repos\\GordiPoss\\chef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:form1.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|c:\\users\\brand\\downloads\\recyagr\\rec\u0026agr\\rec\u0026agr\\interfazcajaregistradora-recup06\\gordipos.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:gordipos.ico||{177559E0-D141-11D0-92DF-00A0C9138C45}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\aperturacaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:aperturacaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:inventario.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\chef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
       "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:chef.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\a\u00F1adirproducto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:a\u00F1adirproducto.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\inventario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:inventario.designer.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\inventario.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:inventario.resx||{81828910-B8B3-4D2B-99A3-067027C180C1}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:a\u00F1adirproducto.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:login.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\cortedecaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:cortedecaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\cortedecaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form",
+      "RelativeMoniker": "D:0:0:{F1693699-EC03-4A37-AD76-13BCD88B04D4}|interfaz de caja registradora.csproj|solutionrelative:cortedecaja.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}|Form"
     }
   ],
   "DocumentGroupContainers": [
@@ -30,78 +74,197 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 4,
+          "SelectedChildIndex": 1,
           "Children": [
             {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{eefa5220-e298-11d0-8f78-00a0c9110057}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{b1e99781-ab81-11d0-b683-00aa00a3ee26}"
-            },
-            {
-              "$type": "Bookmark",
-              "Name": "ST:0:0:{3ae79031-e1bc-11d0-8f78-00a0c9110057}"
-            },
-            {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "Bienvenida.cs",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Bienvenida.cs",
-              "RelativeDocumentMoniker": "Bienvenida.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Bienvenida.cs",
-              "RelativeToolTip": "Bienvenida.cs",
-              "ViewState": "AgIAAFkAAAAAAAAAAAAlwGcAAAAAAAAAAAAAAA==",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T22:30:17.337Z",
-              "EditorCaption": ""
+              "DocumentIndex": 2,
+              "Title": "Gordipos.ico - Icon [16x16, 32 bits, BMP]",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Gordipos.ico",
+              "RelativeDocumentMoniker": "Gordipos.ico",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Gordipos.ico - Icon [16x16, 32 bits, BMP]",
+              "RelativeToolTip": "Gordipos.ico - Icon [16x16, 32 bits, BMP]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001525|",
+              "WhenOpened": "2026-04-21T03:18:21.214Z",
+              "EditorCaption": " - Icon [16x16, 32 bits, BMP]"
             },
             {
               "$type": "Document",
               "DocumentIndex": 0,
-              "Title": "Bienvenida.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Bienvenida.cs",
-              "RelativeDocumentMoniker": "Bienvenida.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Bienvenida.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Bienvenida.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T18:20:04.704Z",
-              "EditorCaption": " [Dise\u00F1o]"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 3,
               "Title": "Form1.cs",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Form1.cs",
               "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs",
-              "RelativeToolTip": "Form1.cs",
-              "ViewState": "AgIAAKACAAAAAAAAAAAowLECAAAEAAAAAAAAAA==",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Form1.cs*",
+              "RelativeToolTip": "Form1.cs*",
+              "ViewState": "AgIAAGEAAAAAAAAAAAAgwGsAAAAIAAAAAAAAAA==",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T18:15:04.287Z"
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 2,
-              "Title": "Form1.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs",
-              "RelativeDocumentMoniker": "Form1.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Form1.cs [Dise\u00F1o]",
-              "RelativeToolTip": "Form1.cs [Dise\u00F1o]",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T18:13:05.764Z"
+              "WhenOpened": "2026-04-20T15:39:48.264Z",
+              "EditorCaption": ""
             },
             {
               "$type": "Document",
               "DocumentIndex": 4,
+              "Title": "login.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\login.cs",
+              "RelativeDocumentMoniker": "login.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\login.cs [Dise\u00F1o]",
+              "RelativeToolTip": "login.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:44.593Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
+              "Title": "Inventario.cs",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Inventario.cs",
+              "RelativeDocumentMoniker": "Inventario.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Inventario.cs",
+              "RelativeToolTip": "Inventario.cs",
+              "ViewState": "AgIAAAQAAAAAAAAAAAAYwA4AAAAZAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:44.593Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 1,
+              "Title": "Form1.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Form1.cs",
+              "RelativeDocumentMoniker": "Form1.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Form1.cs [Dise\u00F1o]*",
+              "RelativeToolTip": "Form1.cs [Dise\u00F1o]*",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:45.718Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "AperturaCaja.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\AperturaCaja.cs",
+              "RelativeDocumentMoniker": "AperturaCaja.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\AperturaCaja.cs [Dise\u00F1o]",
+              "RelativeToolTip": "AperturaCaja.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:45.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 6,
+              "Title": "A\u00F1adirProducto.cs",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\A\u00F1adirProducto.cs",
+              "RelativeDocumentMoniker": "A\u00F1adirProducto.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\A\u00F1adirProducto.cs",
+              "RelativeToolTip": "A\u00F1adirProducto.cs",
+              "ViewState": "AgIAAFYAAAAAAAAAAAAgwFwAAAAVAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:45.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 7,
+              "Title": "Inventario.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Inventario.cs",
+              "RelativeDocumentMoniker": "Inventario.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Inventario.cs [Dise\u00F1o]",
+              "RelativeToolTip": "Inventario.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:44.593Z",
+              "EditorCaption": " [Dise\u00F1o]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 8,
               "Title": "Chef.cs [Dise\u00F1o]",
-              "DocumentMoniker": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Chef.cs",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Chef.cs",
               "RelativeDocumentMoniker": "Chef.cs",
-              "ToolTip": "C:\\Users\\Jaque\\source\\repos\\GordiPoss\\Chef.cs [Dise\u00F1o]",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Chef.cs [Dise\u00F1o]",
               "RelativeToolTip": "Chef.cs [Dise\u00F1o]",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2026-04-19T18:12:20.383Z"
+              "WhenOpened": "2026-04-20T14:49:45.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 9,
+              "Title": "A\u00F1adirProducto.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\A\u00F1adirProducto.Designer.cs",
+              "RelativeDocumentMoniker": "A\u00F1adirProducto.Designer.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\A\u00F1adirProducto.Designer.cs",
+              "RelativeToolTip": "A\u00F1adirProducto.Designer.cs",
+              "ViewState": "AgIAABAAAAAAAAAAAAAQwAAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:45.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 10,
+              "Title": "Inventario.Designer.cs",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Inventario.Designer.cs",
+              "RelativeDocumentMoniker": "Inventario.Designer.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Inventario.Designer.cs",
+              "RelativeToolTip": "Inventario.Designer.cs",
+              "ViewState": "AgIAACgAAAAAAAAAAAAqwDAAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:45.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 11,
+              "Title": "Inventario.resx",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Inventario.resx",
+              "RelativeDocumentMoniker": "Inventario.resx",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\Inventario.resx",
+              "RelativeToolTip": "Inventario.resx",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001005|",
+              "WhenOpened": "2026-04-20T14:49:45.727Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 12,
+              "Title": "A\u00F1adirProducto.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\A\u00F1adirProducto.cs",
+              "RelativeDocumentMoniker": "A\u00F1adirProducto.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\A\u00F1adirProducto.cs [Dise\u00F1o]",
+              "RelativeToolTip": "A\u00F1adirProducto.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:45.727Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 13,
+              "Title": "login.cs",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\login.cs",
+              "RelativeDocumentMoniker": "login.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\login.cs",
+              "RelativeToolTip": "login.cs",
+              "ViewState": "AgIAAAoAAAAAAAAAAAAMwBQAAAANAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:45.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 14,
+              "Title": "CorteDeCaja.cs",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\CorteDeCaja.cs",
+              "RelativeDocumentMoniker": "CorteDeCaja.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\CorteDeCaja.cs",
+              "RelativeToolTip": "CorteDeCaja.cs",
+              "ViewState": "AgIAADUAAAAAAAAAAAAuwHEAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:45.735Z"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 15,
+              "Title": "CorteDeCaja.cs [Dise\u00F1o]",
+              "DocumentMoniker": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\CorteDeCaja.cs",
+              "RelativeDocumentMoniker": "CorteDeCaja.cs",
+              "ToolTip": "C:\\Users\\Brand\\Downloads\\recyagr\\Rec\u0026Agr\\Rec\u0026Agr\\InterfazCajaRegistradora-Recup06\\CorteDeCaja.cs [Dise\u00F1o]",
+              "RelativeToolTip": "CorteDeCaja.cs [Dise\u00F1o]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2026-04-20T14:49:45.735Z"
             }
           ]
         }
