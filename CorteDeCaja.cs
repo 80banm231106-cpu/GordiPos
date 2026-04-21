@@ -3,9 +3,7 @@ using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
-using System.Diagnostics;
 using System.Drawing;
-using System.Globalization;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -15,18 +13,18 @@ namespace interfaz_de_caja_registradora
 {
     public partial class CorteDeCaja : Form
     {
-        public CorteDeCaja()
-        {
-            InitializeComponent();
-        }
-        // 1. Creamos variables a nivel de clase para usarlas en todo el formulario
+        // 1. Variables a nivel de clase
         decimal fondoInicial = 0m;
         decimal ventasDelDia = 0m;
         decimal totalEsperado = 0m;
 
+        public CorteDeCaja()
+        {
+            InitializeComponent();
+        }
+
         private void CorteDeCaja_Load(object sender, EventArgs e)
         {
-
             ObtenerVentasReales();
         }
 
@@ -37,30 +35,22 @@ namespace interfaz_de_caja_registradora
 
             try
             {
-                // 1. Obtenemos el fondo inicial (puedes traerlo de una tabla de configuracion o dejarlo fijo por ahora)
                 string sqlFondo = "SELECT monto_inicial FROM Apertura_caja WHERE DATE(fecha) = CURDATE() ORDER BY id_apertura DESC LIMIT 1";
                 MySqlCommand cmdFondo = new MySqlCommand(sqlFondo, bd.conectar);
                 object resFondo = cmdFondo.ExecuteScalar();
 
-                // Si existe una apertura hoy, la usamos; si no, le ponemos 0 o un valor por defecto
                 fondoInicial = (resFondo != DBNull.Value && resFondo != null) ? Convert.ToDecimal(resFondo) : 0m;
 
-                // 2. Sumamos todas las ventas registradas hoy en la base de datos
-                // Nota: Asegúrate que tu tabla de ventas tenga una columna 'total'
                 string sql = "SELECT SUM(total) FROM ventas WHERE DATE(fecha) = CURDATE()";
                 MySqlCommand comando = new MySqlCommand(sql, bd.conectar);
-
                 object resultado = comando.ExecuteScalar();
 
-                // Si hay ventas hoy, las guardamos; si no, se queda en 0
                 ventasDelDia = (resultado != DBNull.Value) ? Convert.ToDecimal(resultado) : 0m;
 
-                // 3. Llenamos los textos de la interfaz
-                lblCajero.Text = "Cajero: admin"; // Aquí podrías poner el nombre del que hizo login
+                lblCajero.Text = "Cajero: admin";
                 txtFondoinicial.Text = fondoInicial.ToString("C");
                 txtVentastotales.Text = ventasDelDia.ToString("C");
 
-                // 4. Calculamos el total esperado
                 totalEsperado = fondoInicial + ventasDelDia;
                 txtTotalesperado.Text = totalEsperado.ToString("C");
             }
@@ -76,7 +66,6 @@ namespace interfaz_de_caja_registradora
 
         private void txtEfectivoContado_TextChanged(object sender, EventArgs e)
         {
-            // El resto de tu lógica de diferencia se mantiene igual...
             if (decimal.TryParse(txtEfectivoContado.Text, out decimal efectivoReal))
             {
                 decimal diferencia = efectivoReal - totalEsperado;
@@ -90,7 +79,7 @@ namespace interfaz_de_caja_registradora
 
         private void btnFinalizarCorte_Click(object sender, EventArgs e)
         {
-            // 1. VALIDACIÓN: Verificamos que haya un número en el efectivo contado
+            // 1. Validamos
             if (!decimal.TryParse(txtEfectivoContado.Text, out decimal efectivoReal))
             {
                 MessageBox.Show("Por favor, ingrese el total de dinero contado en caja.", "Dato faltante", MessageBoxButtons.OK, MessageBoxIcon.Warning);
@@ -98,78 +87,82 @@ namespace interfaz_de_caja_registradora
                 return;
             }
 
-            // 2. CONFIRMACIÓN: ¿Seguro que quiere cerrar?
-            DialogResult respuesta = MessageBox.Show("¿Deseas finalizar el turno y guardar el corte de caja?", "Confirmar Cierre", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+            // 2. Calculamos diferencia
+            decimal diferencia = efectivoReal - totalEsperado;
 
-            if (respuesta == DialogResult.Yes)
+            // 3. Guardar PDF
+            SaveFileDialog dialogoGuardar = new SaveFileDialog();
+            dialogoGuardar.Filter = "Archivo PDF|*.pdf";
+            dialogoGuardar.Title = "Guardar Reporte de Corte de Caja";
+            dialogoGuardar.FileName = "Corte_Caja_" + DateTime.Now.ToString("ddMMyyyy") + ".pdf";
+
+            if (dialogoGuardar.ShowDialog() == DialogResult.OK)
             {
-                // 3. CÁLCULO DE DIFERENCIA (lo hacemos aquí antes de guardar)
-                decimal diferencia = efectivoReal - totalEsperado;
-
-                // 4. GUARDAR EN LA BASE DE DATOS
-                ConexionBD bd = new ConexionBD();
-                bd.abrir();
-
                 try
                 {
-                    // Insertamos en la tabla cierre_caja usando los nombres de columnas de tu imagen
-                    string sql = @"INSERT INTO cierre_caja (fecha, total, monto_inicial, monto_real, diferencia) 
-                           VALUES (NOW(), @ventas, @inicial, @real, @dif)";
+                    GenerarPDFCorte(dialogoGuardar.FileName, fondoInicial, ventasDelDia, totalEsperado, efectivoReal, diferencia);
 
-                    MySqlCommand comando = new MySqlCommand(sql, bd.conectar);
+                    MessageBox.Show("¡Corte de caja finalizado y guardado con éxito!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
 
-                    // Pasamos los valores de las variables que ya calculamos en el Load y el TextChanged
-                    comando.Parameters.AddWithValue("@ventas", ventasDelDia);
-                    comando.Parameters.AddWithValue("@inicial", fondoInicial);
-                    comando.Parameters.AddWithValue("@real", efectivoReal);
-                    comando.Parameters.AddWithValue("@dif", diferencia);
-
-                    int filasInsertadas = comando.ExecuteNonQuery();
-
-                    if (filasInsertadas > 0)
-                    {
-                        MessageBox.Show("¡Corte guardado exitosamente en la base de datos!", "Éxito", MessageBoxButtons.OK, MessageBoxIcon.Information);
-
-                        // --- 5. REGRESAR AL LOGIN Y CERRAR LA CAJA ---
-
-                        // Abrimos el login (ajusta el nombre si tu form se llama diferente, ej: LoginUsuario)
-                        login ventanaLogin = new login();
-                        ventanaLogin.Show();
-
-                        // Cerramos esta ventana de Corte
-                        this.Close();
-
-                        // Cerramos el Form1 (la caja registradora) para que nadie más la use
-                        Form formularioCaja = Application.OpenForms["Form1"];
-                        if (formularioCaja != null) formularioCaja.Close();
-                    }
+                    Application.Restart();
                 }
                 catch (Exception ex)
                 {
-                    MessageBox.Show("Error al guardar el corte: " + ex.Message, "Error de BD", MessageBoxButtons.OK, MessageBoxIcon.Error);
-                }
-                finally
-                {
-                    bd.cerrar();
+                    MessageBox.Show("Hubo un error al crear el PDF: " + ex.Message, "Error", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
         }
 
-        private void label5_Click(object sender, EventArgs e)
+        private void GenerarPDFCorte(string rutaArchivo, decimal pFondo, decimal pVentas, decimal pEsperado, decimal pReal, decimal pDiferencia)
         {
+            // 1. Creamos el documento tamaño Carta
+            iTextSharp.text.Document documento = new iTextSharp.text.Document(iTextSharp.text.PageSize.LETTER);
 
+            // 2. Lo conectamos al archivo físico que elegiste
+            iTextSharp.text.pdf.PdfWriter.GetInstance(documento, new System.IO.FileStream(rutaArchivo, System.IO.FileMode.Create));
+
+            // 3. Abrimos el PDF para empezar a escribir
+            documento.Open();
+
+            // 4. Creamos fuentes tipográficas clásicas que NUNCA fallan
+            iTextSharp.text.Font fontTitulo = iTextSharp.text.FontFactory.GetFont(iTextSharp.text.FontFactory.HELVETICA_BOLD, 18);
+            iTextSharp.text.Font fontNormal = iTextSharp.text.FontFactory.GetFont(iTextSharp.text.FontFactory.HELVETICA, 12);
+
+            // 5. Título centrado
+            iTextSharp.text.Paragraph titulo = new iTextSharp.text.Paragraph("GORDI FELIZ - CORTE DE CAJA\n", fontTitulo);
+            titulo.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
+            documento.Add(titulo);
+
+            iTextSharp.text.Paragraph fecha = new iTextSharp.text.Paragraph("Fecha: " + DateTime.Now.ToString("dd/MM/yyyy HH:mm") + "\n\n", fontNormal);
+            fecha.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
+            documento.Add(fecha);
+
+            documento.Add(new iTextSharp.text.Paragraph("------------------------------------------------------------------\n", fontNormal));
+
+            // 6. Cantidades
+            documento.Add(new iTextSharp.text.Paragraph("Fondo Inicial:        " + pFondo.ToString("C2"), fontNormal));
+            documento.Add(new iTextSharp.text.Paragraph("Ventas del Día:       " + pVentas.ToString("C2"), fontNormal));
+            documento.Add(new iTextSharp.text.Paragraph("Total Esperado:       " + pEsperado.ToString("C2"), fontNormal));
+            documento.Add(new iTextSharp.text.Paragraph("Efectivo Contado:     " + pReal.ToString("C2"), fontNormal));
+
+            documento.Add(new iTextSharp.text.Paragraph("------------------------------------------------------------------\n", fontNormal));
+
+            // 7. Resultado Final centrado y en negritas
+            string textoDiferencia = pDiferencia == 0 ? "CAJA CUADRADA EXACTAMENTE ($0.00)" :
+                                     pDiferencia > 0 ? "SOBRANTE EN CAJA: " + Math.Abs(pDiferencia).ToString("C2") :
+                                     "FALTANTE EN CAJA: -" + Math.Abs(pDiferencia).ToString("C2");
+
+            iTextSharp.text.Paragraph resultado = new iTextSharp.text.Paragraph("RESULTADO FINAL:\n" + textoDiferencia, fontTitulo);
+            resultado.Alignment = iTextSharp.text.Element.ALIGN_CENTER;
+            documento.Add(resultado);
+
+            // 8. ¡La línea mágica que asegura que el archivo se guarde sano y salvo!
+            documento.Close();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void label4_Click(object sender, EventArgs e)
-        {
-
-        }
-
+        private void label5_Click(object sender, EventArgs e) { }
+        private void textBox1_TextChanged(object sender, EventArgs e) { }
+        private void label4_Click(object sender, EventArgs e) { }
         private void btnRegreso_Click(object sender, EventArgs e)
         {
             this.Close();
